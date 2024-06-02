@@ -1,13 +1,12 @@
 import React from 'react';
-  import { BrowserRouter as Router, Route, Routes } from'react-router-dom';
-  import Home from './Home';
-  import About from './About';
-  import Projects from './Projects';
-  import Skills from './Skills';
-  import Experience from './Experience';
-  import Contact from './Contact';
-  import '../App.css';
+import '../App.css';
+
 const Home = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Handle form submission logic here
+  };
+
   return (
     <div>
       <h1>Welcome to Brad Matera's Portfolio</h1>
@@ -18,41 +17,18 @@ const Home = () => {
             <div className="col-lg-6 mb-4">
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label htmlFor="name" className="form-label">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="name"
-                    required
-                  />
+                  <label htmlFor="name" className="form-label">Name</label>
+                  <input type="text" className="form-control" id="name" required />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="email" className="form-label">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    required
-                  />
+                  <label htmlFor="email" className="form-label">Email</label>
+                  <input type="email" className="form-control" id="email" required />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="message" className="form-label">
-                    Message
-                  </label>
-                  <textarea
-                    className="form-control"
-                    id="message"
-                    rows="5"
-                    required
-                  ></textarea>
+                  <label htmlFor="message" className="form-label">Message</label>
+                  <textarea className="form-control" id="message" rows="5" required></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary w-100">
-                  Send Message
-                </button>
+                <button type="submit" className="btn btn-primary w-100">Send Message</button>
               </form>
             </div>
             <div className="col-lg-6">
@@ -60,36 +36,22 @@ const Home = () => {
                 <div className="card-body">
                   <h5 className="card-title">Contact Info</h5>
                   <p className="card-text">
-                    <i className="fas fa-map-marker-alt me-2"></i> Olympia,
-                    WA, USA
+                    <i className="fas fa-map-marker-alt me-2"></i> Olympia, WA, USA
                     <br />
-                    <i className="fas fa-envelope me-2"></i>
-                    bradmatera@gmail.com
+                    <i className="fas fa-envelope me-2"></i> bradmatera@gmail.com
                     <br />
                     <i className="fas fa-phone me-2"></i> +1 (360) 970-0581
                   </p>
                 </div>
               </div>
               <div className="d-flex justify-content-center">
-                <a
-                  href="https://www.linkedin.com/in/brad-matera-889179260/"
-                  target="_blank"
-                  className="btn btn-outline-primary me-3"
-                >
+                <a href="https://www.linkedin.com/in/brad-matera-889179260/" target="_blank" className="btn btn-outline-primary me-3">
                   <i className="fab fa-linkedin me-2"></i> LinkedIn
                 </a>
-                <a
-                  href="https://github.com/chunkywizard1992"
-                  target="_blank"
-                  className="btn btn-outline-dark me-3"
-                >
+                <a href="https://github.com/chunkywizard1992" target="_blank" className="btn btn-outline-dark me-3">
                   <i className="fab fa-github me-2"></i> GitHub
                 </a>
-                <a
-                  href="https://www.youtube.com/channel/UCo4EcyuHEjfSfozw8LrwfZg"
-                  target="_blank"
-                  className="btn btn-outline-danger"
-                >
+                <a href="https://www.youtube.com/channel/UCo4EcyuHEjfSfozw8LrwfZg" target="_blank" className="btn btn-outline-danger">
                   <i className="fab fa-youtube me-2"></i> YouTube
                 </a>
               </div>
@@ -100,4 +62,5 @@ const Home = () => {
     </div>
   );
 };
+
 export default Home;
