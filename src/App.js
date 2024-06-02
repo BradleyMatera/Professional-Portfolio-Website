@@ -29,19 +29,19 @@ function App() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="#about">About</a>
+                  <a className="nav-link" href="/reactapptest/about">About</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#projects">Projects</a>
+                  <a className="nav-link" href="/reactapptest/projects">Projects</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#skills">Skills</a>
+                  <a className="nav-link" href="/reactapptest/skills">Skills</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#experience">Experience</a>
+                  <a className="nav-link" href="/reactapptest/experience">Experience</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#contact">Contact</a>
+                  <a className="nav-link" href="/reactapptest/contact">Contact</a>
                 </li>
               </ul>
             </div>
