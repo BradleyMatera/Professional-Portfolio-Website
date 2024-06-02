@@ -1,7 +1,7 @@
 {
   "name": "reactapptest",
   "version": "1.0.0",
-  "homepage": "https://BradleyMatera.github.io/JS-Portfolios/reactapptest",
+  "homepage": "https://BradleyMatera.github.io/reactapptest",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
@@ -15,10 +15,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build && git add . && git commit -m 'Deploy update' && git push"
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
-    "@babel/plugin-transform-private-property-in-object": "^7.24.6",
+    "@babel/plugin-transform-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.1.1"
   },
   "browserslist": {
