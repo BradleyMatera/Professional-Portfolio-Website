@@ -1,61 +1,80 @@
 import React from 'react';
-import '../App.css';
+import './Home.css'; // Make sure to create and style this file if needed
 
 const Home = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission logic here
+    // Add form submission logic here
   };
 
   return (
-    <div>
+    <div className="home-container">
       <h1>Welcome to Brad Matera's Portfolio</h1>
-      <section id="contact" className="py-5 bg-light">
+      <section id="about" className="section-about">
         <div className="container">
-          <h2 className="text-center mb-5">Get in Touch</h2>
-          <div className="row">
-            <div className="col-lg-6 mb-4">
-              <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                  <label htmlFor="name" className="form-label">Name</label>
-                  <input type="text" className="form-control" id="name" required />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="email" className="form-label">Email</label>
-                  <input type="email" className="form-control" id="email" required />
-                </div>
-                <div className="mb-3">
-                  <label htmlFor="message" className="form-label">Message</label>
-                  <textarea className="form-control" id="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary w-100">Send Message</button>
-              </form>
+          <h2>About Me</h2>
+          <p>I'm a web developer with a passion for building beautiful and functional websites. I have experience in HTML, CSS, JavaScript, and React.</p>
+        </div>
+      </section>
+
+      <section id="projects" className="section-projects">
+        <div className="container">
+          <h2>Projects</h2>
+          <p>Here are some of the projects I've worked on:</p>
+          <ul>
+            <li>Project 1</li>
+            <li>Project 2</li>
+            <li>Project 3</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills" className="section-skills">
+        <div className="container">
+          <h2>Skills</h2>
+          <p>Here are some of the skills I have:</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="experience" className="section-experience">
+        <div className="container">
+          <h2>Experience</h2>
+          <p>Here's my professional experience:</p>
+          <ul>
+            <li>Job 1</li>
+            <li>Job 2</li>
+            <li>Job 3</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" className="section-contact">
+        <div className="container">
+          <h2>Get in Touch</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input type="text" id="name" required />
             </div>
-            <div className="col-lg-6">
-              <div className="card mb-4">
-                <div className="card-body">
-                  <h5 className="card-title">Contact Info</h5>
-                  <p className="card-text">
-                    <i className="fas fa-map-marker-alt me-2"></i> Olympia, WA, USA
-                    <br />
-                    <i className="fas fa-envelope me-2"></i> bradmatera@gmail.com
-                    <br />
-                    <i className="fas fa-phone me-2"></i> +1 (360) 970-0581
-                  </p>
-                </div>
-              </div>
-              <div className="d-flex justify-content-center">
-                <a href="https://www.linkedin.com/in/brad-matera-889179260/" target="_blank" className="btn btn-outline-primary me-3">
-                  <i className="fab fa-linkedin me-2"></i> LinkedIn
-                </a>
-                <a href="https://github.com/chunkywizard1992" target="_blank" className="btn btn-outline-dark me-3">
-                  <i className="fab fa-github me-2"></i> GitHub
-                </a>
-                <a href="https://www.youtube.com/channel/UCo4EcyuHEjfSfozw8LrwfZg" target="_blank" className="btn btn-outline-danger">
-                  <i className="fab fa-youtube me-2"></i> YouTube
-                </a>
-              </div>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input type="email" id="email" required />
             </div>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+          <div className="contact-info">
+            <h5>Contact Info</h5>
+            <p>Olympia, WA, USA<br />bradmatera@gmail.com<br />+1 (360) 970-0581</p>
           </div>
         </div>
       </section>
