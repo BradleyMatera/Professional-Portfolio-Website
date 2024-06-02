@@ -1,6 +1,12 @@
-// Example for Home.js
 import React from 'react';
-
+  import { BrowserRouter as Router, Route, Routes } from'react-router-dom';
+  import Home from './Home';
+  import About from './About';
+  import Projects from './Projects';
+  import Skills from './Skills';
+  import Experience from './Experience';
+  import Contact from './Contact';
+  import '../App.css';
 const Home = () => {
   return (
     <div>
@@ -94,5 +100,4 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;
