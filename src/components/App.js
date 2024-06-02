@@ -1,18 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
-import './App.css';
+import Home from './Home';
+import About from './About';
+import Projects from './Projects';
+import Skills from './Skills';
+import Experience from './Experience';
+import Contact from './Contact';
+import '../App.css';
 
 function App() {
   return (
-    <Router basename="/JS-Portfolios/reactapptest">
+    <Router basename="/reactapptest">
       <div className="App">
-        {/* Navigation */}
         <nav className="navbar navbar-expand-lg navbar-light fixed-top">
           <div className="container">
             <a className="navbar-brand" href="#">Brad Matera</a>
@@ -48,8 +47,6 @@ function App() {
             </div>
           </div>
         </nav>
-
-        {/* Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
