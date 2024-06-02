@@ -2,6 +2,7 @@
 
 .home-container {
   padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
 .section-about,
@@ -20,6 +21,25 @@
 
 h2 {
   color: #333;
+  margin-bottom: 15px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li strong {
+  display: block;
+  margin-bottom: 5px;
 }
 
 .form-group {
@@ -60,4 +80,5 @@ button:hover {
 
 .contact-info p {
   margin: 0;
+  line-height: 1.6;
 }
