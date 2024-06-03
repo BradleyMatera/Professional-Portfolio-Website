@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "https://bradleymatera.github.io/reactapptest/static/css/main.ed47ba21.css",
-    "main.js": "https://bradleymatera.github.io/reactapptest/static/js/main.2fe0c12d.js",
+    "main.js": "https://bradleymatera.github.io/reactapptest/static/js/main.afcdb3f4.js",
     "index.html": "https://bradleymatera.github.io/reactapptest/index.html",
     "main.ed47ba21.css.map": "https://bradleymatera.github.io/reactapptest/static/css/main.ed47ba21.css.map",
-    "main.2fe0c12d.js.map": "https://bradleymatera.github.io/reactapptest/static/js/main.2fe0c12d.js.map"
+    "main.afcdb3f4.js.map": "https://bradleymatera.github.io/reactapptest/static/js/main.afcdb3f4.js.map"
   },
   "entrypoints": [
     "static/css/main.ed47ba21.css",
-    "static/js/main.2fe0c12d.js"
+    "static/js/main.afcdb3f4.js"
   ]
 }
