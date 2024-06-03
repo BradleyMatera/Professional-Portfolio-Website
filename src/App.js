@@ -6,12 +6,14 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
+import Header from './components/Header'; // Import Header component
 import './App.css';
 
 function App() {
   return (
     <Router basename="/reactapptest">
       <div className="App">
+        <Header /> {/* Include Header component */}
         <nav className="navbar navbar-expand-lg navbar-light fixed-top">
           <div className="container">
             <Link className="navbar-brand" to="/">Brad Matera</Link>
