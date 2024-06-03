@@ -1,45 +1,21 @@
 {
   "name": "reactapptest",
   "version": "1.0.0",
-  "homepage": "https://bradleymatera.github.io/reactapptest",
   "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
   "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@mui/material": "^5.15.19",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.1",
-    "react-scripts": "^5.0.1",
-    "react-spring": "^9.7.3",
-    "styled-components": "^6.1.11"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-class-properties": "^7.24.6",
-    "@babel/plugin-transform-nullish-coalescing-operator": "^7.24.6",
-    "@babel/plugin-transform-optional-chaining": "^7.24.6",
-    "@babel/plugin-transform-private-methods": "^7.24.6",
-    "@babel/plugin-transform-private-property-in-object": "^7.24.6",
-    "gh-pages": "^6.1.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "vite": "^5.2.12",
+    "@vitejs/plugin-react": "^3.0.0"
   }
 }
