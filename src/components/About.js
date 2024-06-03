@@ -1,11 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
+import { Container, Typography, Box } from '@mui/material';
 
-const About = () => {
-  return (
-    <section id="about" className="py-5 bg-light">
-      <div className="container">
-        <h2 className="text-center mb-5">About Me</h2>
-        <p>
+const AboutContainer = styled(Container)`
+  padding: 60px 20px;
+  text-align: center;
+`;
+
+const About = () => (
+  <AboutContainer maxWidth="md">
+    <Typography variant="h2" gutterBottom>
+      About Me
+    </Typography>
+    <Typography variant="body1">
+         <p>
           Forward-thinking web developer with expertise in HTML5, JavaScript, C#, and UX Design,
           currently pursuing a Bachelor's degree in Web Development. Adept in Agile methodologies
           and responsive design principles. Seeking a remote internship in web/software development
@@ -21,9 +29,8 @@ const About = () => {
             <li>Other: Responsive Web Design, UX Design, SQL Databases</li>
           </ul>
         </p>
-      </div>
-    </section>
-  );
-};
+   </Typography>
+  </AboutContainer>
+);
 
 export default About;

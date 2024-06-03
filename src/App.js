@@ -37,7 +37,7 @@ function App() {
         <Header />
         <NavBar className="navbar navbar-expand-lg navbar-light fixed-top">
           <div className="container">
-            <NavBarBrand className="navbar-brand" to="/">Brad Matera</NavBarBrand>
+            <NavBarBrand to="/">Brad Matera</NavBarBrand>
             <button
               className="navbar-toggler"
               type="button"
