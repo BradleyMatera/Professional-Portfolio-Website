@@ -20,11 +20,9 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: ./reactapptest
 
     - name: Build the React app
       run: npm run build
-      working-directory: ./reactapptest
 
     - name: Deploy to GitHub Pages
       env:
@@ -37,4 +35,3 @@ jobs:
         git commit -m "Automated build and deploy"
         git push
         npm run deploy
-      working-directory: ./reactapptest
