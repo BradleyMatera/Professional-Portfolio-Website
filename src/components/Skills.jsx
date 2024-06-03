@@ -30,3 +30,5 @@ For more details, please visit my LinkedIn profile.
 </Typography>
 </SkillsContainer>
 );
+
+export default Skills;
