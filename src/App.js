@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -14,7 +14,7 @@ function App() {
       <div className="App">
         <nav className="navbar navbar-expand-lg navbar-light fixed-top">
           <div className="container">
-            <a className="navbar-brand" href="#">Brad Matera</a>
+            <Link className="navbar-brand" to="/">Brad Matera</Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -29,19 +29,19 @@ function App() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                  <a className="nav-link" href="#about">About</a>
+                  <Link className="nav-link" to="/about">About</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#projects">Projects</a>
+                  <Link className="nav-link" to="/projects">Projects</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#skills">Skills</a>
+                  <Link className="nav-link" to="/skills">Skills</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#experience">Experience</a>
+                  <Link className="nav-link" to="/experience">Experience</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#contact">Contact</a>
+                  <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
