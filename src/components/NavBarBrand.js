@@ -1,14 +1,13 @@
-// src/components/NavBar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavBar.css'; // Make sure you have corresponding CSS for styling
+import './NavBarBrand.css';
 
-const NavBar = ({ children, className }) => {
+const NavBarBrand = ({ to, children }) => {
   return (
-    <nav className={className}>
+    <Link to={to} className="navbar-brand">
       {children}
-    </nav>
+    </Link>
   );
 };
 
-export default NavBar;
+export default NavBarBrand;

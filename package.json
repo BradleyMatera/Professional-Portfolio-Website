@@ -1,18 +1,21 @@
 {
   "name": "reactapptest",
   "version": "1.0.0",
+  "homepage": "https://bradleymatera.github.io/reactapptest",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "serve": "vite preview",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^3.1.0",
-    "vite": "^4.1.0-beta.0"
+    "gh-pages": "^6.1.1",
+    "vite": "^4.5.3"
   }
 }

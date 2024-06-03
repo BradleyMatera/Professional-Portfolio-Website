@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '18'
+        node-version: '18'  # Ensure correct Node.js version
 
     - name: Install dependencies
       run: npm install --legacy-peer-deps
@@ -31,12 +31,6 @@ jobs:
         git config --global user.email "bradmatera@gmail.com"
         git config --global user.name "BradleyMatera"
         git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        
-        # Deploy the content of the dist directory to the gh-pages branch
-        git checkout --orphan gh-pages
-        git --work-tree dist add --all
-        git --work-tree dist commit -m "Deploy to GitHub Pages"
-        git push origin HEAD:gh-pages --force
-        rm -rf dist
-        git checkout -f main
-        git branch -D gh-pages
+        git add -A
+        git commit -m "Automated build and deploy"
+        git push origin HEAD:gh-pages
