@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css';
 
 const Home = () => {
   const handleSubmit = (event) => {
@@ -7,47 +8,53 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <h1>Welcome to Brad Matera's Portfolio</h1>
-      <section id="about" className="py-5">
+    <div className="home-container">
+      <header className="hero-section">
+        <div className="hero-text">
+          <h1>Welcome to Brad Matera's Portfolio</h1>
+          <p>Web Developer | JavaScript Enthusiast | Lifelong Learner</p>
+        </div>
+      </header>
+
+      <section id="about" className="section">
         <div className="container">
-          <h2 className="text-center mb-5">About Me</h2>
+          <h2 className="section-title">About Me</h2>
           <p>
             I am a dedicated web developer with a passion for creating responsive and user-friendly websites. With extensive experience in various JavaScript frameworks and libraries such as React.js, Vue.js, Angular.js, and Vanilla JavaScript, I strive to deliver high-quality projects that meet the needs of clients and users alike.
           </p>
         </div>
       </section>
 
-      <section id="projects" className="py-5 bg-light">
+      <section id="projects" className="section bg-light">
         <div className="container">
-          <h2 className="text-center mb-5">Projects</h2>
-          <ul>
-            <li>
+          <h2 className="section-title">Projects</h2>
+          <ul className="project-list">
+            <li className="project-item">
               <a href="https://github.com/BradleyMatera/JS-Portfolios" target="_blank" rel="noopener noreferrer">
                 JS-Portfolios: Travel Site
               </a>
-              - A foundational project showcasing workflow, version control, and project development process using GitHub, VS Code, and Mac terminal.
+              <p>- A foundational project showcasing workflow, version control, and project development process using GitHub, VS Code, and Mac terminal.</p>
             </li>
-            <li>
+            <li className="project-item">
               <a href="https://github.com/BradleyMatera/WDV-119-Bradley-Matera" target="_blank" rel="noopener noreferrer">
                 WDV-119: Project and Portfolio I: Web Development
               </a>
-              - Demonstrates commitment to industry-standard version control methodologies for efficient and scalable project evolution.
+              <p>- Demonstrates commitment to industry-standard version control methodologies for efficient and scalable project evolution.</p>
             </li>
-            <li>
+            <li className="project-item">
               <a href="https://github.com/chunkywizard1992/MateraBradleyPortfolioPage" target="_blank" rel="noopener noreferrer">
                 MateraBradleyPortfolioPage
               </a>
-              - Github repository for my Portfolio Page.
+              <p>- Github repository for my Portfolio Page.</p>
             </li>
           </ul>
         </div>
       </section>
 
-      <section id="skills" className="py-5">
+      <section id="skills" className="section">
         <div className="container">
-          <h2 className="text-center mb-5">Skills</h2>
-          <ul>
+          <h2 className="section-title">Skills</h2>
+          <ul className="skills-list">
             <li>Frameworks/Libraries: React.js, Vue.js, Angular.js, jQuery</li>
             <li>Languages: HTML5, CSS3, JavaScript</li>
             <li>Tools: Git, Adobe Creative Cloud, VS Code</li>
@@ -56,35 +63,31 @@ const Home = () => {
         </div>
       </section>
 
-      <section id="experience" className="py-5 bg-light">
+      <section id="experience" className="section bg-light">
         <div className="container">
-          <h2 className="text-center mb-5">Experience</h2>
-          <p>
-            <strong>Full Sail University (Aug 2023 - Present)</strong>
-            <br />
-            Student engaged in rigorous coursework focusing on front-end development using HTML5, CSS, JavaScript, and UX Design. Coordinated Agile-based projects utilizing collaboration tools like GitHub and Discord.
-          </p>
-          <p>
-            <strong>Self-employed (Jan 2023 - Present)</strong>
-            <br />
-            Developed and showcased personal projects on YouTube channel, contributing to web development education. Delivered IT consulting, computer repair, and networking services to clients.
-          </p>
-          <p>
-            <strong>Mason County, WA (Sep 2022 - Jan 2023)</strong>
-            <br />
-            Case Manager guiding clients through the court process, assisting with court-mandated activities, and ensuring comprehensive documentation.
-          </p>
-          <p>
-            <strong>Kitten Rescue (Jun 2020 - Sep 2022)</strong>
-            <br />
-            Contributed to the wellbeing and care of kittens, emphasizing kennel maintenance, healthcare assistance, and behavioral support.
-          </p>
+          <h2 className="section-title">Experience</h2>
+          <div className="experience-item">
+            <h3>Full Sail University (Aug 2023 - Present)</h3>
+            <p>Student engaged in rigorous coursework focusing on front-end development using HTML5, CSS, JavaScript, and UX Design. Coordinated Agile-based projects utilizing collaboration tools like GitHub and Discord.</p>
+          </div>
+          <div className="experience-item">
+            <h3>Self-employed (Jan 2023 - Present)</h3>
+            <p>Developed and showcased personal projects on YouTube channel, contributing to web development education. Delivered IT consulting, computer repair, and networking services to clients.</p>
+          </div>
+          <div className="experience-item">
+            <h3>Mason County, WA (Sep 2022 - Jan 2023)</h3>
+            <p>Case Manager guiding clients through the court process, assisting with court-mandated activities, and ensuring comprehensive documentation.</p>
+          </div>
+          <div className="experience-item">
+            <h3>Kitten Rescue (Jun 2020 - Sep 2022)</h3>
+            <p>Contributed to the wellbeing and care of kittens, emphasizing kennel maintenance, healthcare assistance, and behavioral support.</p>
+          </div>
         </div>
       </section>
 
-      <section id="contact" className="py-5">
+      <section id="contact" className="section">
         <div className="container">
-          <h2 className="text-center mb-5">Get in Touch</h2>
+          <h2 className="section-title">Get in Touch</h2>
           <div className="row">
             <div className="col-lg-6 mb-4">
               <form onSubmit={handleSubmit}>
