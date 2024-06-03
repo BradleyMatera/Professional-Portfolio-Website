@@ -1,9 +1,11 @@
 /* Home.css */
 
 .home-container {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
   line-height: 1.6;
+  font-size: 16px;
+  padding: 20px;
 }
 
 .hero-section {
@@ -11,23 +13,57 @@
   color: white;
   text-align: center;
   padding: 100px 20px;
+  min-height: 500px;
+margin-bottom: 20px;
 }
 
 .hero-text h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  color: #fff;
 }
 
 .hero-text p {
   font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  text-align: center;
 }
 
 .section {
   padding: 60px 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 .section.bg-light {
   background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  
 }
 
 .section-title {
@@ -35,7 +71,14 @@
   margin-bottom: 40px;
   font-size: 2em;
   color: #007bff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  text-align: center;
 }
+
 
 .project-list, .skills-list, .experience-item {
   margin: 20px 0;
