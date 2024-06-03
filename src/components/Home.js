@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { Container, Typography, Box, Grid, Button } from '@mui/material';
-import ProjectCard from './ProjectCard'; // Example: ProjectCard component to showcase projects
+import ProjectCard from './ProjectCard';
 
 // Styled Components
 const HomeContainer = styled(Container)`
