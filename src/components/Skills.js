@@ -25,10 +25,8 @@ const Skills = () => (
         <li>Other: Responsive Web Design, UX Design, SQL Databases</li>
       </ul>
     </Typography>
-    <Typography variant="body1">
-      For more details, please visit my LinkedIn profile.
-    </Typography>
-  </SkillsContainer>
+<Typography variant="body1">
+For more details, please visit my LinkedIn profile.
+</Typography>
+</SkillsContainer>
 );
-
-export default Skills;

@@ -1,7 +1,8 @@
 {
-  "name": "my-app",
+    "name": "reactapptest",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "homepage": "https://bradleymatera.github.io/reactapptest",
   "type": "module",
   "scripts": {
     "dev": "vite",
