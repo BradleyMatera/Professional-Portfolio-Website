@@ -8,8 +8,11 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import './App.css';
+import './index.css';
+
 
 function App() {
+
   return (
     <Router>
       <div className="App">
@@ -25,6 +28,6 @@ function App() {
       </div>
     </Router>
   );
-}
+} 
 
 export default App;
