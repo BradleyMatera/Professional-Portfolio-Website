@@ -224,4 +224,4 @@ Error generating stack: `+i.message+`
 `;ue(Kr)`
   padding: 60px 20px;
   text-align: center;
-`;createTheme();$u.createRoot(document.getElementById("root"));
+`;$u.createRoot(document.getElementById("root"));
