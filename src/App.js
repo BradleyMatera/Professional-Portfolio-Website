@@ -1,84 +1,67 @@
+// src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import NavBarBrand from './components/NavBarBrand';
 import Home from './components/Home';
 import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Experience from './components/Experience';
 import Contact from './components/Contact';
-import Header from './components/Header';
-import styled from 'styled-components';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
 import './App.css';
-
-const NavBar = styled.nav`
-  background-color: #61dafb;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-`;
-
-const NavBarBrand = styled(Link)`
-  color: #000;
-  text-decoration: none;
-  font-size: 1.5em;
-`;
-
-const NavBarLink = styled(Link)`
-  color: #000;
-  text-decoration: none;
-  margin: 0 10px;
-`;
 
 function App() {
   return (
-    <Router basename="/reactapptest">
+    <Router>
       <div className="App">
-        <Header />
         <NavBar className="navbar navbar-expand-lg navbar-light fixed-top">
           <div className="container">
             <NavBarBrand to="/">Brad Matera</NavBarBrand>
             <button
               className="navbar-toggler"
               type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
+              data-toggle="collapse"
+              data-target="#navbarResponsive"
+              aria-controls="navbarResponsive"
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav ms-auto">
+            <div className="collapse navbar-collapse" id="navbarResponsive">
+              {/* Add your nav items here */}
+              <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
-                  <NavBarLink className="nav-link" to="/about">About</NavBarLink>
+                  <Link className="nav-link" to="/">Home</Link>
                 </li>
                 <li className="nav-item">
-                  <NavBarLink className="nav-link" to="/projects">Projects</NavBarLink>
+                  <Link className="nav-link" to="/about">About</Link>
                 </li>
                 <li className="nav-item">
-                  <NavBarLink className="nav-link" to="/skills">Skills</NavBarLink>
+                  <Link className="nav-link" to="/contact">Contact</Link>
                 </li>
                 <li className="nav-item">
-                  <NavBarLink className="nav-link" to="/experience">Experience</NavBarLink>
+                  <Link className="nav-link" to="/projects">Projects</Link>
                 </li>
                 <li className="nav-item">
-                  <NavBarLink className="nav-link" to="/contact">Contact</NavBarLink>
+                  <Link className="nav-link" to="/experience">Experience</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/skills">Skills</Link>
                 </li>
               </ul>
             </div>
           </div>
         </NavBar>
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/experience" component={Experience} />
+          <Route path="/skills" component={Skills} />
+        </Switch>
       </div>
     </Router>
   );
