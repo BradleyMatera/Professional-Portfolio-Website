@@ -1,7 +1,7 @@
 {
   "name": "reactapptest",
   "version": "1.0.0",
-"homepage": "https://bradleymatera.github.io/reactapptest",
+  "homepage": "https://bradleymatera.github.io/reactapptest",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
