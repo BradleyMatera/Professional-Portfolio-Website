@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App'; // This path is now correct
+import App from './App';
 import './index.css';
 import './App.css';
 import { CssBaseline } from '@mui/material';

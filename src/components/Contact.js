@@ -1,96 +1,65 @@
 import React from 'react';
+import styled from 'styled-components';
+import { Container, Typography, Box, TextField, Button } from '@mui/material';
 
-const Contact = () => {
-  return (
-    <section id="contact" className="py-5 bg-light">
-      <div className="container">
-        <h2 className="text-center mb-5">Get in Touch</h2>
-        <div className="row">
-          <div className="col-lg-6 mb-4">
-            <form onSubmit={(e) => e.preventDefault()}>
-              <div className="mb-3">
-                <label htmlFor="name" className="form-label">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="name"
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="form-control"
-                  id="email"
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="message" className="form-label">
-                  Message
-                </label>
-                <textarea
-                  className="form-control"
-                  id="message"
-                  rows="5"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary w-100">
-                Send Message
-              </button>
-            </form>
-          </div>
-          <div className="col-lg-6">
-            <div className="card mb-4">
-              <div className="card-body">
-                <h5 className="card-title">Contact Info</h5>
-                <p className="card-text">
-                  <i className="fas fa-map-marker-alt me-2"></i> Olympia, WA, USA
-                  <br />
-                  <i className="fas fa-envelope me-2"></i>
-                  bradmatera@gmail.com
-                  <br />
-                  <i className="fas fa-phone me-2"></i> +1 (360) 970-0581
-                </p>
-              </div>
-            </div>
-            <div className="d-flex justify-content-center">
-              <a
-                href="https://www.linkedin.com/in/championingempatheticwebsolutionsthroughcode/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline-primary me-3"
-              >
-                <i className="fab fa-linkedin me-2"></i> LinkedIn
-              </a>
-              <a
-                href="https://github.com/chunkywizard1992"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline-dark me-3"
-              >
-                <i className="fab fa-github me-2"></i> GitHub
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UCo4EcyuHEjfSfozw8LrwfZg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-outline-danger"
-              >
-                <i className="fab fa-youtube me-2"></i> YouTube
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+const ContactContainer = styled(Container)`
+  padding: 60px 20px;
+  text-align: center;
+`;
+
+const ContactForm = styled(Box)`
+  margin-top: 20px;
+`;
+
+const Contact = () => (
+  <ContactContainer maxWidth="md">
+    <Typography variant="h2" gutterBottom>
+      Contact
+    </Typography>
+    <Typography variant="body1" paragraph>
+      Forward-thinking web developer with expertise in HTML5, JavaScript, C#, and UX Design, currently pursuing a Bachelor's degree in Web Development. Adept in Agile methodologies and responsive design principles.
+    </Typography>
+    <Typography variant="body1" paragraph>
+      If you are interested in collaborating or have any questions, feel free to reach out.
+    </Typography>
+    <ContactForm
+      component="form"
+      noValidate
+      autoComplete="off"
+    >
+      <TextField
+        fullWidth
+        label="Name"
+        margin="normal"
+        variant="outlined"
+      />
+      <TextField
+        fullWidth
+        label="Email"
+        margin="normal"
+        variant="outlined"
+      />
+      <TextField
+        fullWidth
+        label="Message"
+        margin="normal"
+        variant="outlined"
+        multiline
+        rows={4}
+      />
+      <Button
+        variant="contained"
+        color="primary"
+        type="submit"
+        sx={{ marginTop: 2 }}
+      >
+        Send
+      </Button>
+    </ContactForm>
+    <Typography variant="body1">
+      For more details, please visit my LinkedIn profile.
+    </Typography>
+  </ContactContainer>
+);
 
 export default Contact;

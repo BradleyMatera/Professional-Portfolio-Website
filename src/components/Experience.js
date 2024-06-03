@@ -1,43 +1,35 @@
 import React from 'react';
+import styled from 'styled-components';
+import { Container, Typography, Box, Grid } from '@mui/material';
 
-const Experience = () => {
-  return (
-    <section id="experience" className="py-5 bg-light">
-      <div className="container">
-        <h2 className="text-center mb-5">Experience</h2>
-        <ul>
-          <li>
-            <strong>Student (Full Sail University | Aug 2023 - Present)</strong>
-            <p>Engaged in rigorous coursework focusing on front-end development using HTML5, CSS, JavaScript, and UX Design. Coordinated Agile-based projects utilizing collaboration tools like GitHub and Discord.</p>
-          </li>
-          <li>
-            <strong>Web Developer (Self-Employed | Jan 2023 - Present)</strong>
-            <p>Developed and showcased personal projects on YouTube channel, contributing to web development education. Delivered IT consulting, computer repair, and networking services to clients.</p>
-          </li>
-          <li>
-            <strong>Case Manager (Mason County, WA | Sep 2022 - Jan 2023)</strong>
-            <p>Assisted clients with court-mandated activities while employing Agile methodologies. Implemented crisis intervention techniques leveraging communication tools.</p>
-          </li>
-          <li>
-            <strong>Kitten Rescue Volunteer (Mason County Kitten Rescue | Jun 2020 - Sep 2022)</strong>
-            <p>Supported the wellbeing and care of kittens in a compassionate environment. Gained project management, leadership, and teamwork skills through collaboration with cross-generational teams.</p>
-          </li>
-          <li>
-            <strong>Roof Loader (Stoneway Roofing Supply | 2018 - 2019)</strong>
-            <p>Supported construction projects, emphasizing safety, teamwork, and efficient time management.</p>
-          </li>
-          <li>
-            <strong>General Contracting/Construction (Ascend Roofing Company LLC | 2017 - Aug 2018)</strong>
-            <p>Developed strong problem-solving, communication, and project management skills.</p>
-          </li>
-          <li>
-            <strong>Healthcare Specialist (US Army | Jun 2011 - Apr 2014)</strong>
-            <p>Provided critical healthcare services including triage, physical examinations, and crisis management.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-  );
-};
+const ExperienceContainer = styled(Container)`
+  padding: 60px 20px;
+  text-align: center;
+`;
+
+const Experience = () => (
+  <ExperienceContainer maxWidth="md">
+    <Typography variant="h2" gutterBottom>
+      Experience
+    </Typography>
+    <Typography variant="body1" paragraph>
+      Forward-thinking web developer with expertise in HTML5, JavaScript, C#, and UX Design, currently pursuing a Bachelor's degree in Web Development. Adept in Agile methodologies and responsive design principles.
+    </Typography>
+    <Typography variant="body1" paragraph>
+      My professional experience includes:
+      <ul>
+        <li>Student at Full Sail University: Engaged in rigorous coursework focusing on front-end development using HTML5, CSS, JavaScript, and UX Design.</li>
+        <li>Web Developer (Self-Employed): Developed and showcased personal projects on YouTube channel, contributing to web development education.</li>
+        <li>Case Manager at Mason County, WA: Assisted clients with court-mandated activities while employing Agile methodologies.</li>
+        <li>Kitten Rescue Volunteer: Supported the wellbeing and care of kittens in a compassionate environment.</li>
+        <li>Roof Loader at Stoneway Roofing Supply: Supported construction projects, emphasizing safety, teamwork, and efficient time management.</li>
+        <li>Healthcare Specialist in the US Army: Provided critical healthcare services including triage, physical examinations, and crisis management.</li>
+      </ul>
+    </Typography>
+    <Typography variant="body1">
+      For more details, please visit my LinkedIn profile.
+    </Typography>
+  </ExperienceContainer>
+);
 
 export default Experience;

@@ -1,33 +1,32 @@
 import React from 'react';
+import styled from 'styled-components';
+import { Container, Typography, Box, Grid } from '@mui/material';
 
-const Projects = () => {
-  return (
-    <section id="projects" className="py-5 bg-light">
-      <div className="container">
-        <h2 className="text-center mb-5">Projects</h2>
-        <ul>
-          <li>
-            <strong>Portfolio Website</strong>
-            <p>
-              Created a responsive personal website using HTML5, CSS3, and JavaScript. Integrated GitHub API to display recent projects dynamically.
-            </p>
-          </li>
-          <li>
-            <strong>Project Management App (React.js)</strong>
-            <p>
-              Developed a task management application utilizing React.js and Firebase. Implemented user authentication and data storage with real-time updates.
-            </p>
-          </li>
-          <li>
-            <strong>Travel Site</strong>
-            <p>
-              Demonstrates my workflow, version control practices, and project development process using GitHub, VS Code, and the Mac terminal.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-  );
-};
+const ProjectsContainer = styled(Container)`
+  padding: 60px 20px;
+  text-align: center;
+`;
+
+const Projects = () => (
+  <ProjectsContainer maxWidth="md">
+    <Typography variant="h2" gutterBottom>
+      Projects
+    </Typography>
+    <Typography variant="body1" paragraph>
+      Forward-thinking web developer with expertise in HTML5, JavaScript, C#, and UX Design, currently pursuing a Bachelor's degree in Web Development. Adept in Agile methodologies and responsive design principles.
+    </Typography>
+    <Typography variant="body1" paragraph>
+      Here are some of my key projects:
+      <ul>
+        <li>Project Management App: A task management application utilizing React.js and Firebase.</li>
+        <li>Portfolio Website: A responsive personal website using HTML5, CSS3, and JavaScript.</li>
+        <li>Travel Site: A comprehensive travel site showcasing various destinations.</li>
+      </ul>
+    </Typography>
+    <Typography variant="body1">
+      For more details, please visit my LinkedIn profile.
+    </Typography>
+  </ProjectsContainer>
+);
 
 export default Projects;

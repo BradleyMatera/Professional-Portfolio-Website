@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
-import { Container, Typography, Box, List, ListItem, Button } from '@mui/material';
+import { Container, Typography, Box, Grid, Button } from '@mui/material';
+import ProjectCard from './ProjectCard'; // Example: ProjectCard component to showcase projects
 
 // Styled Components
 const HomeContainer = styled(Container)`
@@ -54,7 +55,6 @@ const HeroText = styled.div`
 const Section = styled(Box)`
   padding: 60px 20px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #eee;
   text-align: center;
   background: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -74,35 +74,23 @@ const SectionTitle = styled(Typography)`
   font-weight: 300;
 `;
 
-const ProjectList = styled(List)`
+const SkillsList = styled(Grid)`
+  margin-top: 20px;
+`;
+
+const SkillItem = styled(Box)`
   margin: 20px 0;
-  list-style: none;
+`;
+
+const ContactSection = styled(Box)`
+  padding: 60px 20px;
+  background: #007bff;
+  color: white;
   text-align: center;
 `;
 
-const ProjectItem = styled(ListItem)`
-  font-weight: bold;
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s;
-  margin-bottom: 10px;
-  display: block;
-  text-align: center;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 300;
-
-  p {
-    margin: 5px 0 15px 0;
-    font-size: 1em;
-    font-weight: 300;
-    color: #666;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: 'Oswald', sans-serif;
-  }
+const ContactButton = styled(Button)`
+  margin-top: 20px;
 `;
 
 const Home = () => {
@@ -117,27 +105,64 @@ const Home = () => {
     <HomeContainer maxWidth="lg">
       <HeroSection style={heroProps}>
         <HeroText>
-          <Typography variant="h1">Welcome to My Tech Blog</Typography>
-          <Typography variant="subtitle1">Exploring the Latest in Technology</Typography>
+          <Typography variant="h1">Brad Matera</Typography>
+          <Typography variant="subtitle1">Showcasing My React.js Projects and Portfolio</Typography>
         </HeroText>
       </HeroSection>
+
       <Section>
-        <SectionTitle variant="h2">About</SectionTitle>
-        <Typography>This is the about section.</Typography>
+        <SectionTitle variant="h2">Skills</SectionTitle>
+        <SkillsList container spacing={3}>
+          <SkillItem item xs={12} sm={6} md={4}>
+            <Typography variant="h6">React.js</Typography>
+          </SkillItem>
+          <SkillItem item xs={12} sm={6} md={4}>
+            <Typography variant="h6">JavaScript</Typography>
+          </SkillItem>
+          <SkillItem item xs={12} sm={6} md={4}>
+            <Typography variant="h6">HTML5 & CSS3</Typography>
+          </SkillItem>
+          <SkillItem item xs={12} sm={6} md={4}>
+            <Typography variant="h6">UX Design</Typography>
+          </SkillItem>
+          <SkillItem item xs={12} sm={6} md={4}>
+            <Typography variant="h6">Git & GitHub</Typography>
+          </SkillItem>
+          <SkillItem item xs={12} sm={6} md={4}>
+            <Typography variant="h6">Agile Methodologies</Typography>
+          </SkillItem>
+        </SkillsList>
       </Section>
+
       <Section>
         <SectionTitle variant="h2">Projects</SectionTitle>
-        <ProjectList>
-          <ProjectItem>
-            <Button variant="contained" color="primary">Project 1</Button>
-            <Typography>Details about Project 1</Typography>
-          </ProjectItem>
-          <ProjectItem>
-            <Button variant="contained" color="primary">Project 2</Button>
-            <Typography>Details about Project 2</Typography>
-          </ProjectItem>
-        </ProjectList>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6} md={4}>
+            <ProjectCard
+              title="Project Management App"
+              description="A task management application utilizing React.js and Firebase."
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <ProjectCard
+              title="Portfolio Website"
+              description="A responsive personal website using HTML5, CSS3, and JavaScript."
+            />
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <ProjectCard
+              title="Travel Site"
+              description="A comprehensive travel site showcasing various destinations."
+            />
+          </Grid>
+        </Grid>
       </Section>
+
+      <ContactSection>
+        <Typography variant="h2">Get In Touch</Typography>
+        <Typography variant="subtitle1">Interested in collaborating or learning more?</Typography>
+        <ContactButton variant="contained" color="secondary">Contact Me</ContactButton>
+      </ContactSection>
     </HomeContainer>
   );
 };
