@@ -20,11 +20,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: ./
+      working-directory: ./reactapptest
 
     - name: Build the React app
       run: npm run build
-      working-directory: ./
+      working-directory: ./reactapptest
 
     - name: Deploy to GitHub Pages
       env:
@@ -32,10 +32,9 @@ jobs:
       run: |
         git config --global user.email "bradmatera@gmail.com"
         git config --global user.name "BradleyMatera"
-        git pull origin main
+        git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
         git add .
         git commit -m "Automated build and deploy"
         git push
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
         npm run deploy
-      working-directory: ./
+      working-directory: ./reactapptest
