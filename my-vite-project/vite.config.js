@@ -3,12 +3,12 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  base: '/reactapptest/', // Ensure this matches your GitHub repository name
+  base: '/my-vite-project/',  // Ensure this matches your GitHub repository name
   plugins: [react()],
   build: {
     outDir: 'dist',
     rollupOptions: {
-      input: 'public/index.html',
+      input: path.resolve(__dirname, 'public/index.html'),
     },
   },
   resolve: {
