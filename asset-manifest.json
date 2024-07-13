@@ -1,15 +1,17 @@
 {
   "files": {
     "main.css": "https://bradleymatera.github.io/reactapptest/static/css/main.e6c13ad2.css",
-    "main.js": "https://bradleymatera.github.io/reactapptest/static/js/main.32de4669.js",
+    "main.js": "https://bradleymatera.github.io/reactapptest/static/js/main.02482ca7.js",
     "static/js/453.7a894929.chunk.js": "https://bradleymatera.github.io/reactapptest/static/js/453.7a894929.chunk.js",
+    "static/media/RoxysFittness.png": "https://bradleymatera.github.io/reactapptest/static/media/RoxysFittness.c4db92422064d34224e7.png",
+    "static/media/Pokedex.png": "https://bradleymatera.github.io/reactapptest/static/media/Pokedex.88a873b7889d6d552366.png",
     "index.html": "https://bradleymatera.github.io/reactapptest/index.html",
     "main.e6c13ad2.css.map": "https://bradleymatera.github.io/reactapptest/static/css/main.e6c13ad2.css.map",
-    "main.32de4669.js.map": "https://bradleymatera.github.io/reactapptest/static/js/main.32de4669.js.map",
+    "main.02482ca7.js.map": "https://bradleymatera.github.io/reactapptest/static/js/main.02482ca7.js.map",
     "453.7a894929.chunk.js.map": "https://bradleymatera.github.io/reactapptest/static/js/453.7a894929.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.32de4669.js"
+    "static/js/main.02482ca7.js"
   ]
 }
