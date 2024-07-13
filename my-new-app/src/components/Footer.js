@@ -105,10 +105,10 @@ const Footer = () => (
           <IconWrapper href="https://www.linkedin.com/in/championingempatheticwebsolutionsthroughcode/" target="_blank" rel="noopener noreferrer">
             <FaLinkedinIn />
           </IconWrapper>
-          <IconWrapper href="https://www.youtube.com/channel/UCoSTyFXtQD48XOqXVx4x-uw" target="_blank" rel="noopener noreferrer">
+          <IconWrapper href="https://www.youtube.com/@bradmatera" target="_blank" rel="noopener noreferrer">
             <FaYoutube />
           </IconWrapper>
-          <IconWrapper href="https://codepen.io/tv/bNOBEL" target="_blank" rel="noopener noreferrer">
+          <IconWrapper href="https://codepen.io/student-account-bradley-matera" target="_blank" rel="noopener noreferrer">
             <FaCodepen />
           </IconWrapper>
         </SocialIcons>

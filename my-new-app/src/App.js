@@ -6,6 +6,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
+import SkillsShowcase from './components/SkillsShowcase';
 
 const AppContainer = styled.div`
   background-color: #1c1c1c;
@@ -20,6 +21,7 @@ const App = () => {
       <HeaderNavBar />
       <About />
       <Skills />
+      <SkillsShowcase />
       <Projects />
       <Contact />
       <Footer />
