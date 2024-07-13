@@ -12,46 +12,51 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Debug - Print working directory
+      run: pwd
+
+    - name: Debug - List directory contents
+      run: ls -R
+
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '18'
 
-    - name: Debug - List directory contents
-      run: ls -R
-
-    - name: Find and use package.json
+    - name: Find package.json
       run: |
-        if [ -f "./package.json" ]; then
-          echo "Package.json found in root directory"
-        elif [ -f "./my-new-app/package.json" ]; then
-          echo "Package.json found in my-new-app directory"
-          cd my-new-app
-        else
+        PACKAGE_JSON_PATH=$(find . -name package.json)
+        if [ -z "$PACKAGE_JSON_PATH" ]; then
           echo "Error: package.json not found"
           exit 1
+        else
+          echo "package.json found at $PACKAGE_JSON_PATH"
+          echo "PACKAGE_JSON_PATH=$PACKAGE_JSON_PATH" >> $GITHUB_ENV
         fi
 
     - name: Install dependencies
-      run: npm install
+      run: |
+        cd $(dirname $PACKAGE_JSON_PATH)
+        npm install
 
     - name: Build the React app
-      run: npm run build
+      run: |
+        cd $(dirname $PACKAGE_JSON_PATH)
+        npm run build
 
     - name: Add .nojekyll file
       run: |
-        if [ -d "build" ]; then
-          touch build/.nojekyll
-        elif [ -d "../build" ]; then
-          touch ../build/.nojekyll
-        else
+        BUILD_DIR=$(find . -type d -name "build")
+        if [ -z "$BUILD_DIR" ]; then
           echo "Error: build directory not found"
           exit 1
+        else
+          touch $BUILD_DIR/.nojekyll
+          echo "BUILD_DIR=$BUILD_DIR" >> $GITHUB_ENV
         fi
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         branch: gh-pages
-        folder: build
-        path: ${{ github.workspace }}
+        folder: ${{ env.BUILD_DIR }}
