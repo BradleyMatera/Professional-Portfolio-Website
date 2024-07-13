@@ -66,6 +66,7 @@ const Projects = () => {
       description: "A project developed as part of the Dev2501 course, showcasing various web development skills and techniques.",
       image: "https://via.placeholder.com/400x225?text=Dev2501+Project",
       githubLink: "https://github.com/BradleyMatera/Matera_Bradley_Dev2501",
+      liveLink: "https://bradleymatera.github.io/reactapptest",
     },
   ];
 
