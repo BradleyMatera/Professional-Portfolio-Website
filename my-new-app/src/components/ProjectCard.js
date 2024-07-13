@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Card, CardContent, Typography } from '@mui/material';
 
 // Styled components for the project card
-const StyledCard = styled.div`
-  background-color: #fff; // White background for the card
+const StyledCard = styled(Card)`
+  background-color: #ffffff; // White background for the card
   padding: 20px; // Padding inside the card
   margin: 20px; // Margin outside the card
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Shadow for depth
@@ -16,8 +17,14 @@ const StyledCard = styled.div`
 
 const ProjectCard = ({ title, description }) => (
   <StyledCard>
-    <h3>{title}</h3>
-    <p>{description}</p>
+    <CardContent>
+      <Typography variant="h5" component="div">
+        {title}
+      </Typography>
+      <Typography variant="body2" color="textSecondary">
+        {description}
+      </Typography>
+    </CardContent>
   </StyledCard>
 );
 

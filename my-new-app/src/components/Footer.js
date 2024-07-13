@@ -1,14 +1,12 @@
-// Importing necessary modules from React and styled-components
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaYoutube, FaCodepen } from 'react-icons/fa';
 
-// Styled components for the footer layout and styling
 const FooterContainer = styled.footer`
-  background: ${props => props.background || 'linear-gradient(to right, #FF0000, #0000FF)'};
-  color: ${props => props.color || '#fff'};
+  background: #1c1c1c;
+  color: #ffffff;
   padding: 40px 20px 20px;
-  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-family: Arial, sans-serif;
 `;
 
 const Content = styled.div`
@@ -20,13 +18,14 @@ const Content = styled.div`
 `;
 
 const Section = styled.div`
-  flex-basis: 22%;
+  flex-basis: 30%;
   margin-bottom: 20px;
 `;
 
 const SectionTitle = styled.h3`
   font-size: 18px;
   margin-bottom: 15px;
+  color: #fb8b24;
 `;
 
 const SectionText = styled.p`
@@ -44,24 +43,30 @@ const LinkItem = styled.li`
 `;
 
 const Link = styled.a`
-  color: ${props => props.linkColor || '#fff'};
+  color: #ffffff;
   text-decoration: none;
   font-size: 14px;
   line-height: 1.8;
-
   &:hover {
+    color: #fb8b24;
     text-decoration: underline;
   }
 `;
 
 const SocialIcons = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
-const IconWrapper = styled.div`
-  font-size: 20px;
-  margin-right: 15px;
+const IconWrapper = styled.a`
+  font-size: 24px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  color: #ffffff;
   cursor: pointer;
+  &:hover {
+    color: #fb8b24;
+  }
 `;
 
 const BottomBar = styled.div`
@@ -75,52 +80,45 @@ const Copyright = styled.p`
   font-size: 14px;
 `;
 
-// Defining the Footer class component
-class Footer extends Component {
-  // render method to return the JSX
-  render() {
-    const { background, color, linkColor } = this.props; // Destructuring props for use within the component
+const Footer = () => (
+  <FooterContainer>
+    <Content>
+      <Section>
+        <SectionTitle>About Me</SectionTitle>
+        <SectionText>I'm a passionate web developer focused on creating responsive and interactive web applications. Always eager to learn and take on new challenges in the ever-evolving world of web development.</SectionText>
+      </Section>
+      <Section>
+        <SectionTitle>Quick Links</SectionTitle>
+        <LinkList>
+          <LinkItem><Link href="#about">About</Link></LinkItem>
+          <LinkItem><Link href="#skills">Skills</Link></LinkItem>
+          <LinkItem><Link href="#projects">Projects</Link></LinkItem>
+          <LinkItem><Link href="#contact">Contact</Link></LinkItem>
+        </LinkList>
+      </Section>
+      <Section>
+        <SectionTitle>Connect</SectionTitle>
+        <SocialIcons>
+          <IconWrapper href="https://github.com/BradleyMatera" target="_blank" rel="noopener noreferrer">
+            <FaGithub />
+          </IconWrapper>
+          <IconWrapper href="https://www.linkedin.com/in/championingempatheticwebsolutionsthroughcode/" target="_blank" rel="noopener noreferrer">
+            <FaLinkedinIn />
+          </IconWrapper>
+          <IconWrapper href="https://www.youtube.com/channel/UCoSTyFXtQD48XOqXVx4x-uw" target="_blank" rel="noopener noreferrer">
+            <FaYoutube />
+          </IconWrapper>
+          <IconWrapper href="https://codepen.io/tv/bNOBEL" target="_blank" rel="noopener noreferrer">
+            <FaCodepen />
+          </IconWrapper>
+        </SocialIcons>
+        <SectionText>Email: bradmatera@gmail.com</SectionText>
+      </Section>
+    </Content>
+    <BottomBar>
+      <Copyright>&copy; {new Date().getFullYear()} Bradley Matera. All rights reserved.</Copyright>
+    </BottomBar>
+  </FooterContainer>
+);
 
-    return (
-      // The main container for the footer, using styled-components for styling
-      <FooterContainer background={background} color={color}>
-        <Content>
-          {/* Each Section represents a part of the footer */}
-          <Section>
-            <SectionTitle>About Us</SectionTitle>
-            <SectionText>We are dedicated to providing top-notch solutions for your needs.</SectionText>
-          </Section>
-          <Section>
-            <SectionTitle>Quick Links</SectionTitle>
-            <LinkList>
-              <LinkItem><Link href="/terms" linkColor={linkColor}>Terms and Conditions</Link></LinkItem>
-              <LinkItem><Link href="/privacy" linkColor={linkColor}>Privacy Policy</Link></LinkItem>
-              <LinkItem><Link href="/faq" linkColor={linkColor}>FAQ</Link></LinkItem>
-            </LinkList>
-          </Section>
-          <Section>
-            <SectionTitle>Contact Us</SectionTitle>
-            <SectionText>Email: contact@example.com</SectionText>
-            <SectionText>Phone: (123) 456-7890</SectionText>
-          </Section>
-          <Section>
-            <SectionTitle>Follow Us</SectionTitle>
-            <SocialIcons>
-              {/* Wrapping each icon with IconWrapper styled-component for styling and spacing */}
-              <IconWrapper><FaFacebookF /></IconWrapper>
-              <IconWrapper><FaTwitter /></IconWrapper>
-              <IconWrapper><FaLinkedinIn /></IconWrapper>
-              <IconWrapper><FaInstagram /></IconWrapper>
-            </SocialIcons>
-          </Section>
-        </Content>
-        <BottomBar>
-          <Copyright>&copy; 2024 Your Company. All rights reserved.</Copyright>
-        </BottomBar>
-      </FooterContainer>
-    );
-  }
-}
-
-// Exporting the Footer component for use in other parts of the application
 export default Footer;

@@ -1,46 +1,60 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Card, CardContent } from '@mui/material';
 
 const ProjectsContainer = styled(Container)`
   padding: 60px 20px;
   text-align: center;
+  background: #fb8b24;
+  color: #ffffff;
 `;
 
-const ProjectList = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+const ProjectCard = styled(Card)`
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
 `;
 
-const ProjectItem = styled.li`
-  margin-bottom: 8px;
-`;
-
-class Projects extends Component {
-  render() {
-    return (
-      <ProjectsContainer maxWidth="md">
-        <Typography variant="h2" gutterBottom>
-          Projects
-        </Typography>
-        <Typography variant="body1" paragraph>
-          Forward-thinking web developer with expertise in HTML5, JavaScript, C#, and UX Design, currently pursuing a Bachelor's degree in Web Development. Adept in Agile methodologies and responsive design principles.
-        </Typography>
-        <Typography variant="body1" paragraph>
-          Here are some of my key projects:
-        </Typography>
-        <ProjectList>
-          <ProjectItem>Project Management App: A task management application utilizing React.js and Firebase.</ProjectItem>
-          <ProjectItem>Portfolio Website: A responsive personal website using HTML5, CSS3, and JavaScript.</ProjectItem>
-          <ProjectItem>Travel Site: A comprehensive travel site showcasing various destinations.</ProjectItem>
-        </ProjectList>
-        <Typography variant="body1">
-          For more details, please visit my LinkedIn profile.
-        </Typography>
-      </ProjectsContainer>
-    );
-  }
-}
+const Projects = () => {
+  return (
+    <ProjectsContainer maxWidth="md">
+      <Typography variant="h2" gutterBottom>
+        Projects
+      </Typography>
+      <Typography variant="body1" paragraph>
+        Here are some of my key projects that showcase my skills in web development:
+      </Typography>
+      <ProjectCard>
+        <CardContent>
+          <Typography variant="h5" gutterBottom>
+            Mom's Site
+          </Typography>
+          <Typography variant="body2">
+            A responsive website built for my mom's business using HTML, CSS, and JavaScript. Features include a photo gallery, contact form, and service descriptions.
+          </Typography>
+        </CardContent>
+      </ProjectCard>
+      <ProjectCard>
+        <CardContent>
+          <Typography variant="h5" gutterBottom>
+            React Professional Portfolio
+          </Typography>
+          <Typography variant="body2">
+            A dynamic portfolio website built with React.js, showcasing my projects and skills. Utilizes modern web development practices and responsive design.
+          </Typography>
+        </CardContent>
+      </ProjectCard>
+      <ProjectCard>
+        <CardContent>
+          <Typography variant="h5" gutterBottom>
+            Interactive Pokedex
+          </Typography>
+          <Typography variant="body2">
+            An engaging Pokedex application built with HTML, Tailwind CSS, and JavaScript. Integrates various Pokémon APIs for a comprehensive user experience.
+          </Typography>
+        </CardContent>
+      </ProjectCard>
+    </ProjectsContainer>
+  );
+};
 
 export default Projects;
