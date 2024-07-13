@@ -8,7 +8,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -18,11 +17,32 @@ jobs:
       with:
         node-version: '18'
 
+    - name: Check directory structure
+      run: ls -R
+
     - name: Install dependencies
-      run: npm install --legacy-peer-deps
+      run: |
+        if [ -f "./package.json" ]; then
+          npm install --legacy-peer-deps
+        elif [ -f "./my-new-app/package.json" ]; then
+          cd my-new-app
+          npm install --legacy-peer-deps
+        else
+          echo "Cannot find package.json"
+          exit 1
+        fi
 
     - name: Build the React app
-      run: npm run build
+      run: |
+        if [ -f "./package.json" ]; then
+          npm run build
+        elif [ -f "./my-new-app/package.json" ]; then
+          cd my-new-app
+          npm run build
+        else
+          echo "Cannot find package.json"
+          exit 1
+        fi
 
     - name: Deploy to GitHub Pages
       env:
@@ -31,4 +51,12 @@ jobs:
         git config --global user.email "bradmatera@gmail.com"
         git config --global user.name "BradleyMatera"
         git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-        npm run deploy
+        if [ -f "./package.json" ]; then
+          npm run deploy
+        elif [ -f "./my-new-app/package.json" ]; then
+          cd my-new-app
+          npm run deploy
+        else
+          echo "Cannot find package.json"
+          exit 1
+        fi
