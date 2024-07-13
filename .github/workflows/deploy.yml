@@ -17,13 +17,20 @@ jobs:
       with:
         node-version: '18'
 
-    - name: Cache dependencies
-      uses: actions/cache@v2
-      with:
-        path: ~/.npm
-        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.OS }}-node-
+    - name: Debug - List directory contents
+      run: ls -R
+
+    - name: Find and use package.json
+      run: |
+        if [ -f "./package.json" ]; then
+          echo "Package.json found in root directory"
+        elif [ -f "./my-new-app/package.json" ]; then
+          echo "Package.json found in my-new-app directory"
+          cd my-new-app
+        else
+          echo "Error: package.json not found"
+          exit 1
+        fi
 
     - name: Install dependencies
       run: npm install
@@ -32,10 +39,19 @@ jobs:
       run: npm run build
 
     - name: Add .nojekyll file
-      run: touch build/.nojekyll
+      run: |
+        if [ -d "build" ]; then
+          touch build/.nojekyll
+        elif [ -d "../build" ]; then
+          touch ../build/.nojekyll
+        else
+          echo "Error: build directory not found"
+          exit 1
+        fi
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         branch: gh-pages
         folder: build
+        path: ${{ github.workspace }}
