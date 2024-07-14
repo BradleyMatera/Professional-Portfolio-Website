@@ -54,8 +54,8 @@ const projects = [
     title: "Interactive Pokedex",
     description: "An engaging Pokedex application built with HTML, Tailwind CSS, and JavaScript. It integrates various Pokémon APIs to provide a comprehensive user experience.",
     image: pokedexImage,
-    githubLink: "https://github.com/BradleyMatera/TESTAPP",
-    liveLink: "https://bradleymatera.github.io/TESTAPP/",
+    githubLink: "https://github.com/BradleyMatera/Interactive-Pokedex",
+    liveLink: "https://bradleymatera.github.io/Interactive-Pokedex/",
   },
   {
     title: "Mom's Business Website",
