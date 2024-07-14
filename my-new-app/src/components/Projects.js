@@ -69,15 +69,15 @@ const projects = [
     description: "A project developed as part of the Dev2501 course, showcasing various web development skills and techniques.",
     image: "https://via.placeholder.com/400x225?text=Dev2501+Project",
     githubLink: "https://github.com/BradleyMatera/Matera_Bradley_Dev2501",
-    liveLink: "https://bradleymatera.github.io/reactapptest",
+    liveLink: "https://bradleymatera.github.io/Matera_Bradley_Dev2501",
   },
 
   {
     title: "Travel Site",
     description: "Ready Set Travel Pages showcasing my work",
     image: "https://via.placeholder.com/400x225?text=Ready+Set+Travel+Pages",
-    githubLink: "hhttps://github.com/BradleyMatera/WDV-119-Bradley-Matera",
-    liveLink: null,
+    githubLink: "https://github.com/BradleyMatera/ReadySetTravelPages/",
+    liveLink: "https://bradleymatera.github.io/ReadySetTravelPages/",
   }
 ];
 
