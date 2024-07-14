@@ -38,7 +38,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "PUBLIC_URL=hhttps://bradleymatera.github.io/Professional-Portfolio-Website/ react-scripts build",
+    "build": "PUBLIC_URL=https://bradleymatera.github.io/Professional-Portfolio-Website/ react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
