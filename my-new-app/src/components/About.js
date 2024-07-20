@@ -1,24 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Container, Typography, Box } from '@mui/material';
-
-const AboutContainer = styled(Container)`
-  padding: 60px 20px;
-  text-align: center;
-  background: #0f4c5c;
-  color: #ffffff;
-`;
-
-const ExperienceList = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-`;
-
-const ExperienceItem = styled.li`
-  margin-bottom: 16px;
-`;
+import { Typography, Box } from '@mui/material';
+import { AboutContainer, ExperienceList, ExperienceItem } from '../styles/AboutStyledComponents';
 
 const About = () => {
   return (

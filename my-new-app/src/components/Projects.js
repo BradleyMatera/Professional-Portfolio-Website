@@ -1,85 +1,41 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Container, Typography, Card, CardContent, CardMedia, Button, Grid } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 import { FaGithub, FaExternalLinkAlt, FaCodepen } from 'react-icons/fa';
 import pokedexImage from '../assets/imgs/Pokedex.png';
 import roxysFittnessImage from '../assets/imgs/RoxysFittness.png';
-
-// Styled components for custom styles
-const ProjectsContainer = styled(Container)`
-  padding: 60px 20px;
-  background: #fb8b24;
-  color: #ffffff;
-`;
-
-const ProjectCard = styled(Card)`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #1c1c1c;
-  color: #ffffff;
-`;
-
-const ProjectMedia = styled(CardMedia)`
-  height: 0;
-  padding-top: 56.25%; // 16:9 aspect ratio
-`;
-
-const ProjectContent = styled(CardContent)`
-  flex-grow: 1;
-`;
-
-const ProjectLinks = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin-top: auto;
-  padding: 16px;
-`;
-
-const LinkButton = styled(Button)`
-  color: #fb8b24;
-  border-color: #fb8b24;
-  &:hover {
-    background-color: rgba(251, 139, 36, 0.1);
-  }
-`;
-
-const CodePenGrid = styled(Grid)`
-  margin-top: 40px;
-`;
+import { ProjectsContainer, ProjectCard, ProjectMedia, ProjectContent, ProjectLinks, LinkButton, CodePenGrid } from '../styles/ProjectsStyledComponents';
 
 const Projects = () => {
-const projects = [
-  {
-    title: "Interactive Pokedex",
-    description: "An engaging Pokedex application built with HTML, Tailwind CSS, and JavaScript. It integrates various Pokémon APIs to provide a comprehensive user experience.",
-    image: pokedexImage,
-    githubLink: "https://github.com/BradleyMatera/Interactive-Pokedex",
-    liveLink: "https://bradleymatera.github.io/Interactive-Pokedex/",
-  },
-  {
-    title: "Mom's Business Website",
-    description: "A responsive website developed for my mom's fitness business using HTML, CSS, and JavaScript. Features include a photo gallery and contact form.",
-    image: roxysFittnessImage,
-    githubLink: "https://github.com/BradleyMatera/Moms-website",
-    liveLink: "https://bradleymatera.github.io/Moms-website/",
-  },
-  {
-    title: "Dev2501 Project",
-    description: "A project developed as part of the Dev2501 course, showcasing various web development skills and techniques.",
-    image: "https://via.placeholder.com/400x225?text=Dev2501+Project",
-    githubLink: "https://github.com/BradleyMatera/Matera_Bradley_Dev2501",
-    liveLink: "https://bradleymatera.github.io/Matera_Bradley_Dev2501",
-  },
-
-  {
-    title: "Travel Site",
-    description: "Ready Set Travel Pages showcasing my work",
-    image: "https://via.placeholder.com/400x225?text=Ready+Set+Travel+Pages",
-    githubLink: "https://github.com/BradleyMatera/ReadySetTravelPages/",
-    liveLink: "https://bradleymatera.github.io/ReadySetTravelPages/",
-  }
-];
+  const projects = [
+    {
+      title: "Interactive Pokedex",
+      description: "An engaging Pokedex application built with HTML, Tailwind CSS, and JavaScript. It integrates various Pokémon APIs to provide a comprehensive user experience.",
+      image: pokedexImage,
+      githubLink: "https://github.com/BradleyMatera/Interactive-Pokedex",
+      liveLink: "https://bradleymatera.github.io/Interactive-Pokedex/",
+    },
+    {
+      title: "Mom's Business Website",
+      description: "A responsive website developed for my mom's fitness business using HTML, CSS, and JavaScript. Features include a photo gallery and contact form.",
+      image: roxysFittnessImage,
+      githubLink: "https://github.com/BradleyMatera/Moms-website",
+      liveLink: "https://bradleymatera.github.io/Moms-website/",
+    },
+    {
+      title: "Dev2501 Project",
+      description: "A project developed as part of the Dev2501 course, showcasing various web development skills and techniques.",
+      image: "https://via.placeholder.com/400x225?text=Dev2501+Project",
+      githubLink: "https://github.com/BradleyMatera/Matera_Bradley_Dev2501",
+      liveLink: "https://bradleymatera.github.io/Matera_Bradley_Dev2501",
+    },
+    {
+      title: "Travel Site",
+      description: "Ready Set Travel Pages showcasing my work",
+      image: "https://via.placeholder.com/400x225?text=Ready+Set+Travel+Pages",
+      githubLink: "https://github.com/BradleyMatera/ReadySetTravelPages/",
+      liveLink: "https://bradleymatera.github.io/ReadySetTravelPages/",
+    }
+  ];
 
   const codePens = [
     { title: "Arrays and Classes Exercise", link: "https://codepen.io/student-account-bradley-matera/pen/GRaZGPE" },

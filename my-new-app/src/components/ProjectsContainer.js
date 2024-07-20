@@ -1,37 +1,6 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import ProjectCard from './ProjectCard';
-
-// Styled component for the container
-const ProjectsWrapper = styled.div`
-  padding: 60px 20px; // Padding for spacing
-  text-align: center; // Center-align text
-  background: #e36414; // Add background color
-  color: #ffffff; // Text color
-`;
-
-const ProjectList = styled.div`
-  display: flex; // Flexbox layout for projects
-  flex-wrap: wrap; // Wrap projects to new lines if needed
-  justify-content: center; // Center align projects
-`;
-
-const ProjectDetails = styled.div`
-  margin-top: 20px;
-  padding: 20px;
-  background: #ffffff;
-  color: #000000;
-  border-radius: 8px;
-  text-align: left;
-`;
-
-const ProjectLink = styled.a`
-  color: #0f4c5c;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
+import { ProjectsWrapper, ProjectList, ProjectDetails, ProjectLink } from '../styles/ProjectsStyledComponents';
 
 class ProjectsContainer extends Component {
   constructor(props) {
@@ -42,7 +11,7 @@ class ProjectsContainer extends Component {
           title: "Mom's Site",
           description: 'A comprehensive and visually appealing website built for my mom using cutting-edge web technologies.',
           details: `This project involved creating a fully responsive, user-friendly website for my mom's business, showcasing her services and expertise. The site includes several key features:
-
+          
           - Photo Gallery: A dynamic gallery showcasing high-quality images of completed projects and services.
           - Contact Form: An interactive form allowing potential clients to easily reach out for inquiries or bookings.
           - Service Descriptions: Detailed, engaging descriptions of all services offered, helping visitors understand the value proposition.
@@ -53,7 +22,7 @@ class ProjectsContainer extends Component {
           - Testimonials Section: A dedicated area featuring client testimonials to build trust and credibility.
           - Interactive Map: Integration of Google Maps API to help clients easily locate the business.
           - Newsletter Signup: A feature allowing visitors to subscribe for updates and special offers.
-
+          
           The design is clean, modern, and aligns with current web design trends, ensuring an engaging user experience that effectively represents my mom's brand and services.`,
           liveLink: 'https://bradleymatera.github.io/Moms-website/',
           githubLink: 'https://github.com/BradleyMatera/Moms-website',
