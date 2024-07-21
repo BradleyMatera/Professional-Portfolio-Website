@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/css/main.64da7bca.css",
-    "main.js": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/js/main.af76e70b.js",
+    "main.js": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/js/main.a36cdafe.js",
     "static/media/profiles.png": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/profiles.5abef268672a1819184e.png",
-    "static/media/projects.png": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/projects.13c16a3d4c23a752918b.png",
     "static/media/backroundimage.png": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/backroundimage.5da5ee6eb36ff97b37b5.png",
     "static/media/roboto-latin-400-normal.woff2": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-latin-400-normal.b009a76ad6afe4ebd301.woff2",
     "static/media/roboto-cyrillic-ext-400-normal.woff2": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-cyrillic-ext-400-normal.804378952da8a10faae2.woff2",
@@ -21,10 +20,10 @@
     "static/media/roboto-greek-ext-400-normal.woff": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "index.html": "https://bradleymatera.github.io/Professional-Portfolio-Website/index.html",
     "main.64da7bca.css.map": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/css/main.64da7bca.css.map",
-    "main.af76e70b.js.map": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/js/main.af76e70b.js.map"
+    "main.a36cdafe.js.map": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/js/main.a36cdafe.js.map"
   },
   "entrypoints": [
     "static/css/main.64da7bca.css",
-    "static/js/main.af76e70b.js"
+    "static/js/main.a36cdafe.js"
   ]
 }
