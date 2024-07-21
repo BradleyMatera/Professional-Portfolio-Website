@@ -1,84 +1,19 @@
 import React from 'react';
-import styled from 'styled-components';
 import { FaGithub, FaLinkedinIn, FaYoutube, FaCodepen } from 'react-icons/fa';
-
-const FooterContainer = styled.footer`
-  background: #1c1c1c;
-  color: #ffffff;
-  padding: 40px 20px 20px;
-  font-family: Arial, sans-serif;
-`;
-
-const Content = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-`;
-
-const Section = styled.div`
-  flex-basis: 30%;
-  margin-bottom: 20px;
-`;
-
-const SectionTitle = styled.h3`
-  font-size: 18px;
-  margin-bottom: 15px;
-  color: #fb8b24;
-`;
-
-const SectionText = styled.p`
-  font-size: 14px;
-  line-height: 1.5;
-`;
-
-const LinkList = styled.ul`
-  list-style: none;
-  padding: 0;
-`;
-
-const LinkItem = styled.li`
-  margin-bottom: 10px;
-`;
-
-const Link = styled.a`
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 1.8;
-  &:hover {
-    color: #fb8b24;
-    text-decoration: underline;
-  }
-`;
-
-const SocialIcons = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
-
-const IconWrapper = styled.a`
-  font-size: 24px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  color: #ffffff;
-  cursor: pointer;
-  &:hover {
-    color: #fb8b24;
-  }
-`;
-
-const BottomBar = styled.div`
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 20px;
-  padding-top: 20px;
-  text-align: center;
-`;
-
-const Copyright = styled.p`
-  font-size: 14px;
-`;
+import { 
+  FooterContainer, 
+  Content, 
+  Section, 
+  SectionTitle, 
+  SectionText, 
+  LinkList, 
+  LinkItem, 
+  Link, 
+  SocialIcons, 
+  IconWrapper, 
+  BottomBar, 
+  Copyright 
+} from '../styles/FooterStyledComponents';
 
 const Footer = () => (
   <FooterContainer>
@@ -90,10 +25,10 @@ const Footer = () => (
       <Section>
         <SectionTitle>Quick Links</SectionTitle>
         <LinkList>
-          <LinkItem><Link href="#about">About</Link></LinkItem>
-          <LinkItem><Link href="#skills">Skills</Link></LinkItem>
-          <LinkItem><Link href="#projects">Projects</Link></LinkItem>
-          <LinkItem><Link href="#contact">Contact</Link></LinkItem>
+          <LinkItem><Link href="/about">About</Link></LinkItem>
+          <LinkItem><Link href="/skills">Skills</Link></LinkItem>
+          <LinkItem><Link href="/projects">Projects</Link></LinkItem>
+          <LinkItem><Link href="/contact">Contact</Link></LinkItem>
         </LinkList>
       </Section>
       <Section>

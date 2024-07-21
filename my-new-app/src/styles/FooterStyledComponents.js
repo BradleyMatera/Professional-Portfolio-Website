@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-  background: #1c1c1c;
+  background: #0a192f;
   color: #ffffff;
   padding: 40px 20px 20px;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 `;
 
 export const Content = styled.div`
@@ -23,12 +23,13 @@ export const Section = styled.div`
 export const SectionTitle = styled.h3`
   font-size: 18px;
   margin-bottom: 15px;
-  color: #fb8b24;
+  color: #64ffda;
 `;
 
 export const SectionText = styled.p`
   font-size: 14px;
   line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
 `;
 
 export const LinkList = styled.ul`
@@ -46,7 +47,7 @@ export const Link = styled.a`
   font-size: 14px;
   line-height: 1.8;
   &:hover {
-    color: #fb8b24;
+    color: #64ffda;
     text-decoration: underline;
   }
 `;
@@ -63,7 +64,7 @@ export const IconWrapper = styled.a`
   color: #ffffff;
   cursor: pointer;
   &:hover {
-    color: #fb8b24;
+    color: #64ffda;
   }
 `;
 
@@ -76,4 +77,5 @@ export const BottomBar = styled.div`
 
 export const Copyright = styled.p`
   font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
 `;

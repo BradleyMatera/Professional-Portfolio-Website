@@ -1,26 +1,26 @@
 import React from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import HeaderNavBar from './components/HeaderNavBar';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import SkillsPage from './pages/SkillsPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ContactPage from './pages/ContactPage';
 import Footer from './components/Footer';
-import About from './components/About';
-import Contact from './components/Contact';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import SkillsShowcase from './components/SkillsShowcase';
-import { AppContainer, AppContent } from './styles/AppStyledComponents';
 
 const App = () => {
   return (
-    <AppContainer>
+    <BrowserRouter>
       <HeaderNavBar />
-      <AppContent>
-        <About />
-        <Skills />
-        <SkillsShowcase />
-        <Projects />
-        <Contact />
-      </AppContent>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
       <Footer />
-    </AppContainer>
+    </BrowserRouter>
   );
 };
 

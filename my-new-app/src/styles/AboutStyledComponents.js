@@ -4,8 +4,25 @@ import { Container } from '@mui/material';
 export const AboutContainer = styled(Container)`
   padding: 60px 20px;
   text-align: center;
-  background: #0f4c5c;
+  background: #0a192f;
   color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const HighlightText = styled.span`
+  color: #64ffda;
+`;
+
+export const BlurBackground = styled.div`
+  backdrop-filter: blur(10px);
+  background-color: rgba(10, 25, 47, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 `;
 
 export const ExperienceList = styled.ul`
@@ -16,5 +33,13 @@ export const ExperienceList = styled.ul`
 `;
 
 export const ExperienceItem = styled.li`
+  display: flex;
+  align-items: center;
   margin-bottom: 16px;
+`;
+
+export const IconWrapper = styled.div`
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
 `;

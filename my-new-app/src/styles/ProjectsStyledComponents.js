@@ -4,7 +4,7 @@ import { Container, Card, CardMedia, CardContent, Button, Grid } from '@mui/mate
 // Styled components for custom styles
 export const ProjectsContainer = styled(Container)`
   padding: 60px 20px;
-  background: #fb8b24;
+  background: #0a192f;
   color: #ffffff;
 `;
 
@@ -19,6 +19,13 @@ export const ProjectCard = styled(Card)`
 export const ProjectMedia = styled(CardMedia)`
   height: 0;
   padding-top: 56.25%; // 16:9 aspect ratio
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const ProjectContent = styled(CardContent)`
