@@ -2,7 +2,7 @@
   "name": "my-new-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bradleymatera.github.io/",
+  "homepage": "https://bradleymatera.github.io/Professional-Portfolio-Website/",
   "eslintConfig": {
     "extends": [
       "react-app",
