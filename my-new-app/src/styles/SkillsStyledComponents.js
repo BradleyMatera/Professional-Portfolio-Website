@@ -9,23 +9,19 @@ export const SkillsContainer = styled(Container)`
   color: #ffffff;
 `;
 
-// List for the skills
-export const SkillList = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-`;
-
 // List item for each skill
 export const SkillItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-bottom: 16px;
+  padding: 20px;
   cursor: pointer;
+  border-radius: 8px;
+  background-color: #1c1c1c;
   &:hover {
     background-color: rgba(100, 255, 218, 0.1);
-    border-radius: 8px;
     transition: background-color 0.3s ease;
   }
 `;
@@ -64,6 +60,7 @@ export const Button = styled(MuiButton)`
 export const IconGrid = styled(Grid)`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 20px;
 `;
 
@@ -81,6 +78,7 @@ export const BlurBackground = styled.div`
   background-color: rgba(10, 25, 47, 0.7);
   padding: 20px;
   border-radius: 10px;
+  margin-bottom: 20px;
 `;
 
 // Highlight text style
@@ -108,13 +106,14 @@ export const Section = styled.div`
 export const ModalContent = styled.div`
   position: absolute;
   top: 50%;
-  left: transform: translate(-50%, -50%);
-background: #1c1c1c;
-color: #ffffff;
-padding: 20px;
-border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-width: 90%;
-max-width: 500px;
-text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1c1c1c;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
 `;

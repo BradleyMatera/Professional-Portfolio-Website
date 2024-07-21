@@ -14,7 +14,10 @@ import {
   IconGrid,
   ChartContainer,
   IconWrapper,
-  ModalContent
+  ModalContent,
+  Section,
+  HighlightText,
+  BlurBackground
 } from '../styles/SkillsStyledComponents';
 
 // Register Chart.js components
@@ -92,56 +95,64 @@ const SkillsPage = () => {
 
   return (
     <SkillsContainer maxWidth="md">
-      <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-        <Typography variant="h2" gutterBottom className="animate-text">
-          Skills
-        </Typography>
-        <Typography variant="body1" paragraph className="animate-text">
-          Passionate web developer with expertise in front-end technologies and modern JavaScript frameworks. Proficient in creating responsive and interactive web applications with a focus on clean, efficient code and optimal user experience.
-        </Typography>
-        <Typography variant="body1" paragraph className="animate-text">
-          My key skills include:
-        </Typography>
-      </motion.div>
-      <IconGrid container spacing={4}>
-        {skillsData.map((skill, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
-            <SkillItem onClick={() => handleOpenModal(skill)}>
-              <IconWrapper>{React.createElement(skill.icon, { size: '3em', color: '#64ffda' })}</IconWrapper>
-              <Typography variant="h6">{skill.title}</Typography>
-            </SkillItem>
-          </Grid>
-        ))}
-      </IconGrid>
-      <ShowcaseContainer>
-        <Typography variant="h4" gutterBottom>
-          Skills and Projects Showcase
-        </Typography>
-        <Skill>Frontend Skills: {frontendSkills}</Skill>
-        <Skill>Backend Skills: {backendSkills}</Skill>
-        <Skill>Completed Projects: {projects}</Skill>
-        <Skill>Total Lines of Code: {totalCodeLines}</Skill>
-        <Button onClick={() => setFrontendSkills(frontendSkills + 1)}>Learn Frontend Skill</Button>
-        <Button onClick={() => setBackendSkills(backendSkills + 1)}>Learn Backend Skill</Button>
-        <Button onClick={() => setProjects(projects + 1)}>Complete Project</Button>
-        <Button onClick={() => setTotalCodeLines(totalCodeLines + 100)}>Write 100 Lines of Code</Button>
-      </ShowcaseContainer>
-      <ChartContainer>
-        <Bar data={data} options={options} />
-      </ChartContainer>
-      <Modal open={openModal} onClose={handleCloseModal}>
-        <ModalContent>
-          <Typography variant="h4" gutterBottom>
-            {selectedSkill.title}
-          </Typography>
-          <Typography variant="body1">
-            {selectedSkill.description}
-          </Typography>
-          <Button onClick={handleCloseModal} variant="contained" sx={{ mt: 2 }}>
-            Close
-          </Button>
-        </ModalContent>
-      </Modal>
+      <BlurBackground>
+        <Section>
+          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+            <Typography variant="h2" gutterBottom className="animate-text">
+              Skills
+            </Typography>
+            <Typography variant="body1" paragraph className="animate-text">
+              Passionate web developer with expertise in front-end technologies and modern JavaScript frameworks. Proficient in creating responsive and interactive web applications with a focus on clean, efficient code and optimal user experience.
+            </Typography>
+            <Typography variant="body1" paragraph className="animate-text">
+              My key skills include:
+            </Typography>
+          </motion.div>
+          <IconGrid container spacing={4}>
+            {skillsData.map((skill, index) => (
+              <Grid item xs={12} sm={6} md={4} key={index}>
+                <SkillItem onClick={() => handleOpenModal(skill)}>
+                  <IconWrapper>{React.createElement(skill.icon, { size: '3em', color: '#64ffda' })}</IconWrapper>
+                  <Typography variant="h6">{skill.title}</Typography>
+                </SkillItem>
+              </Grid>
+            ))}
+          </IconGrid>
+        </Section>
+        <Section>
+          <ShowcaseContainer>
+            <Typography variant="h4" gutterBottom>
+              Skills and Projects Showcase
+            </Typography>
+            <Skill>Frontend Skills: <HighlightText>{frontendSkills}</HighlightText></Skill>
+            <Skill>Backend Skills: <HighlightText>{backendSkills}</HighlightText></Skill>
+            <Skill>Completed Projects: <HighlightText>{projects}</HighlightText></Skill>
+            <Skill>Total Lines of Code: <HighlightText>{totalCodeLines}</HighlightText></Skill>
+            <Button onClick={() => setFrontendSkills(frontendSkills + 1)}>Learn Frontend Skill</Button>
+            <Button onClick={() => setBackendSkills(backendSkills + 1)}>Learn Backend Skill</Button>
+            <Button onClick={() => setProjects(projects + 1)}>Complete Project</Button>
+            <Button onClick={() => setTotalCodeLines(totalCodeLines + 100)}>Write 100 Lines of Code</Button>
+          </ShowcaseContainer>
+        </Section>
+        <Section>
+          <ChartContainer>
+            <Bar data={data} options={options} />
+          </ChartContainer>
+        </Section>
+        <Modal open={openModal} onClose={handleCloseModal}>
+          <ModalContent>
+            <Typography variant="h4" gutterBottom>
+              {selectedSkill.title}
+            </Typography>
+            <Typography variant="body1">
+              {selectedSkill.description}
+            </Typography>
+            <Button onClick={handleCloseModal} variant="contained" sx={{ mt: 2 }}>
+              Close
+            </Button>
+          </ModalContent>
+        </Modal>
+      </BlurBackground>
     </SkillsContainer>
   );
 };

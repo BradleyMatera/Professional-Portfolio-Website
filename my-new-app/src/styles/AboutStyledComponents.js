@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 export const AboutContainer = styled(Container)`
   padding: 60px 20px;
@@ -42,4 +42,23 @@ export const IconWrapper = styled.div`
   margin-right: 10px;
   display: flex;
   align-items: center;
+`;
+
+export const AnimatedText = styled(Typography)`
+  &.animate-text {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  &.text-loop {
+    animation: loop 5s infinite ease-in-out;
+  }
+
+  @keyframes loop {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
+  }
 `;

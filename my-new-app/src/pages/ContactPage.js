@@ -1,12 +1,75 @@
-import React from 'react';
-import { Typography, Box, Button, Grid } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Typography, Box, Button, Grid, Snackbar, Alert } from '@mui/material';
 import { motion } from 'framer-motion';
 import { ContactContainer, ContactForm, StyledTextField } from '../styles/ContactStyledComponents';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    to_name: 'Bradley Matera',
+    from_name: '',
+    message: '',
+    reply_to: '',
+  });
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: '',
+    severity: 'success',
+  });
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js";
+    script.async = true;
+    script.onload = () => {
+      window.emailjs.init("bhtw4DGUnI8tHgIXQ");
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Form submitted');
+    
+    window.emailjs.send('service_d897zpl', 'template_dibo5n9', formData)
+      .then((response) => {
+        setSnackbar({ 
+          open: true, 
+          message: 'Message sent successfully!', 
+          severity: 'success' 
+        });
+        setFormData({ 
+          to_name: 'Bradley Matera',
+          from_name: '',
+          message: '',
+          reply_to: '',
+        });
+      })
+      .catch((error) => {
+        setSnackbar({ 
+          open: true, 
+          message: `Failed to send message: ${error.text}`, 
+          severity: 'error' 
+        });
+      });
+  };
+
+  const handleCloseSnackbar = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    setSnackbar({ ...snackbar, open: false });
   };
 
   return (
@@ -36,14 +99,20 @@ const ContactPage = () => {
         >
           <StyledTextField
             fullWidth
-            label="Name"
+            label="Your Name"
+            name="from_name"
+            value={formData.from_name}
+            onChange={handleChange}
             margin="normal"
             variant="outlined"
             required
           />
           <StyledTextField
             fullWidth
-            label="Email"
+            label="Your Email"
+            name="reply_to"
+            value={formData.reply_to}
+            onChange={handleChange}
             margin="normal"
             variant="outlined"
             required
@@ -52,6 +121,9 @@ const ContactPage = () => {
           <StyledTextField
             fullWidth
             label="Message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
             margin="normal"
             variant="outlined"
             multiline
@@ -74,17 +146,27 @@ const ContactPage = () => {
           <Grid container spacing={2} justifyContent="center" style={{ marginTop: '20px' }}>
             <Grid item>
               <motion.a href="https://github.com/BradleyMatera" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} style={{ color: '#ffffff' }}>
-                GitHub
+                <FaGithub size="2em" />
               </motion.a>
             </Grid>
             <Grid item>
               <motion.a href="https://www.linkedin.com/in/championingempatheticwebsolutionsthroughcode/" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} style={{ color: '#ffffff' }}>
-                LinkedIn
+                <FaLinkedin size="2em" />
               </motion.a>
             </Grid>
           </Grid>
         </Box>
       </motion.div>
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={6000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert onClose={handleCloseSnackbar} severity={snackbar.severity} sx={{ width: '100%' }}>
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </ContactContainer>
   );
 };
