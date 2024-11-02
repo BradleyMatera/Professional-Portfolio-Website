@@ -2,16 +2,13 @@
   "name": "my-new-app",
   "version": "0.1.0",
   "private": true,
-"homepage": "https://bradleymatera.github.io/Professional-Portfolio-Website",
+  "homepage": "https://bradleymatera.github.io/Professional-Portfolio-Website",
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "scripts": {
     "start": "react-scripts start",
-"build": "PUBLIC_URL=https://bradleymatera.github.io/ react-scripts build",
+    "build": "PUBLIC_URL=https://bradleymatera.github.io/Professional-Portfolio-Website react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -44,7 +41,6 @@
     "web-vitals": "^4.2.2"
   },
   "devDependencies": {
-    "eslint": "^9.7.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-import": "^2.29.1",
@@ -56,15 +52,7 @@
     "react-test-renderer": "^18.3.1"
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   }
 }
