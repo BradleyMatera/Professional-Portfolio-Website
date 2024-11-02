@@ -3,7 +3,6 @@ import { Typography, Box, Button, Grid, Snackbar, Alert } from '@mui/material';
 import { motion } from 'framer-motion';
 import { ContactContainer, ContactForm, StyledTextField } from '../styles/ContactStyledComponents';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import BackgroundImage from '../assets/imgs/bg.jpg';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({

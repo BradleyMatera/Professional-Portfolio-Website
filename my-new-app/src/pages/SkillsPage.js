@@ -53,10 +53,10 @@ const skillsData = [
 ];
 
 const SkillsPage = () => {
-  const [frontendSkills, setFrontendSkills] = useState(3);
-  const [backendSkills, setBackendSkills] = useState(1);
-  const [projects, setProjects] = useState(3);
-  const [totalCodeLines, setTotalCodeLines] = useState(1000);
+  const [frontendSkills] = useState(3);
+  const [backendSkills] = useState(1);
+  const [projects] = useState(3);
+  const [totalCodeLines] = useState(1000);
   const [openModal, setOpenModal] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState({});
 

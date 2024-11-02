@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Typography, Box } from '@mui/material';
 import { motion } from 'framer-motion';
 import anime from 'animejs/lib/anime.es.js';
-import { FaGraduationCap, FaLaptopCode, FaBriefcase, FaMedkit } from 'react-icons/fa';
 import styled from '@emotion/styled';
 import BackgroundImage from '../assets/imgs/bg.jpg';
 
@@ -32,11 +31,7 @@ const BlurBackground = styled.div`
   margin-bottom: 20px;
 `;
 
-const IconWrapper = styled.div`
-  font-size: 2rem;
-  color: #64ffda;
-  margin-right: 10px;
-`;
+
 
 const AboutPage = () => {
   useEffect(() => {
