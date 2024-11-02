@@ -1,3 +1,5 @@
+// AboutStyledComponents.js
+
 import styled from '@emotion/styled';
 import { Container, Typography } from '@mui/material';
 
@@ -61,4 +63,11 @@ export const AnimatedText = styled(Typography)`
     75% { transform: translateY(10px); }
     100% { transform: translateY(0); }
   }
+`;
+
+// Newly added Section component
+export const Section = styled.div`
+  margin-bottom: 40px;
+  width: 100%;
+  text-align: center;
 `;

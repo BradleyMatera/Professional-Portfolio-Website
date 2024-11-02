@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Typography, Box, Button, Grid, Snackbar, Alert } from '@mui/material';
+import { Typography, Button, Grid, Snackbar, Alert } from '@mui/material';
 import { motion } from 'framer-motion';
-import { ContactContainer, ContactForm, StyledTextField } from '../styles/ContactStyledComponents';
+import { ContactContainer, ContactForm, StyledTextField, SocialLinkButton } from '../styles/ContactStyledComponents';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const ContactPage = () => {
@@ -43,32 +43,17 @@ const ContactPage = () => {
     event.preventDefault();
     
     window.emailjs.send('service_d897zpl', 'template_dibo5n9', formData)
-      .then((response) => {
-        setSnackbar({ 
-          open: true, 
-          message: 'Message sent successfully!', 
-          severity: 'success' 
-        });
-        setFormData({ 
-          to_name: 'Bradley Matera',
-          from_name: '',
-          message: '',
-          reply_to: '',
-        });
+      .then(() => {
+        setSnackbar({ open: true, message: 'Message sent successfully!', severity: 'success' });
+        setFormData({ to_name: 'Bradley Matera', from_name: '', message: '', reply_to: '' });
       })
       .catch((error) => {
-        setSnackbar({ 
-          open: true, 
-          message: `Failed to send message: ${error.text}`, 
-          severity: 'error' 
-        });
+        setSnackbar({ open: true, message: `Failed to send message: ${error.text}`, severity: 'error' });
       });
   };
 
   const handleCloseSnackbar = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
+    if (reason === 'clickaway') return;
     setSnackbar({ ...snackbar, open: false });
   };
 
@@ -86,11 +71,12 @@ const ContactPage = () => {
           I'm always interested in new opportunities, collaborations, or just chatting about web development. Feel free to reach out!
         </Typography>
         <Typography variant="body1" paragraph>
-          Email me directly at: <a href="mailto:bradmatera@gmail.com" style={{color: '#ffffff'}}>bradmatera@gmail.com</a>
+          Email me directly at: <a href="mailto:bradmatera@gmail.com" style={{ color: '#64ffda', textDecoration: 'underline' }}>bradmatera@gmail.com</a>
         </Typography>
         <Typography variant="body1" paragraph>
           Or use the form below:
         </Typography>
+        
         <ContactForm
           component="form"
           noValidate
@@ -132,31 +118,42 @@ const ContactPage = () => {
           />
           <Button
             variant="contained"
-            color="primary"
             type="submit"
-            sx={{ marginTop: 2, backgroundColor: '#ffffff', color: '#e36414' }}
+            sx={{
+              marginTop: 2,
+              backgroundColor: '#64ffda',
+              color: '#0a192f',
+              '&:hover': { backgroundColor: '#52c7c9' }
+            }}
           >
             Send Message
           </Button>
         </ContactForm>
-        <Box mt={4}>
-          <Typography variant="body1">
-            You can also find me on:
-          </Typography>
-          <Grid container spacing={2} justifyContent="center" style={{ marginTop: '20px' }}>
-            <Grid item>
-              <motion.a href="https://github.com/BradleyMatera" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} style={{ color: '#ffffff' }}>
-                <FaGithub size="2em" />
-              </motion.a>
-            </Grid>
-            <Grid item>
-              <motion.a href="https://www.linkedin.com/in/championingempatheticwebsolutionsthroughcode/" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} style={{ color: '#ffffff' }}>
-                <FaLinkedin size="2em" />
-              </motion.a>
-            </Grid>
+        
+        <Grid container spacing={2} justifyContent="center" style={{ marginTop: '40px' }}>
+          <Grid item>
+            <SocialLinkButton
+              href="https://github.com/BradleyMatera"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+            >
+              <FaGithub size="2em" />
+            </SocialLinkButton>
           </Grid>
-        </Box>
+          <Grid item>
+            <SocialLinkButton
+              href="https://www.linkedin.com/in/championingempatheticwebsolutionsthroughcode/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+            >
+              <FaLinkedin size="2em" />
+            </SocialLinkButton>
+          </Grid>
+        </Grid>
       </motion.div>
+
       <Snackbar
         open={snackbar.open}
         autoHideDuration={6000}
