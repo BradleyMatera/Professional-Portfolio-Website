@@ -6,9 +6,6 @@ import {
   Section, 
   SectionTitle, 
   SectionText, 
-  LinkList, 
-  LinkItem, 
-  Link, 
   SocialIcons, 
   IconWrapper, 
   BottomBar, 
@@ -21,15 +18,6 @@ const Footer = () => (
       <Section>
         <SectionTitle>About Me</SectionTitle>
         <SectionText>I'm a passionate web developer focused on creating responsive and interactive web applications. Always eager to learn and take on new challenges in the ever-evolving world of web development.</SectionText>
-      </Section>
-      <Section>
-        <SectionTitle>Quick Links</SectionTitle>
-        <LinkList>
-          <LinkItem><Link href="/about">About</Link></LinkItem>
-          <LinkItem><Link href="/skills">Skills</Link></LinkItem>
-          <LinkItem><Link href="/projects">Projects</Link></LinkItem>
-          <LinkItem><Link href="/contact">Contact</Link></LinkItem>
-        </LinkList>
       </Section>
       <Section>
         <SectionTitle>Connect</SectionTitle>
