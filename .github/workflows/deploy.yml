@@ -8,31 +8,32 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18'
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
 
-    - name: Install dependencies
-      run: |
-        cd my-new-app
-        npm install
+      - name: Navigate to project directory and install dependencies
+        working-directory: ./my-new-app
+        run: |
+          npm install
 
-    - name: Build the React app
-      run: |
-        cd my-new-app
-        npm run build
+      - name: Build the React app
+        working-directory: ./my-new-app
+        run: |
+          npm run build
 
-    - name: Add .nojekyll file to bypass Jekyll processing
-      run: |
-        touch my-new-app/build/.nojekyll
+      - name: Add .nojekyll file to bypass Jekyll processing
+        working-directory: ./my-new-app/build
+        run: touch .nojekyll
 
-    - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@4.1.5
-      with:
-        branch: gh-pages  # Target branch for GitHub Pages
-        folder: my-new-app/build  # Path to the build output folder
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages  # Target branch for GitHub Pages
+          folder: my-new-app/build  # Path to the build output folderolder
