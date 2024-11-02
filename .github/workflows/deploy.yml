@@ -18,30 +18,33 @@ jobs:
         node-version: '18'
 
     - name: Find package.json
+      id: find-package
       run: |
         PACKAGE_JSON_PATH=$(find . -name package.json | grep -v /node_modules/ | head -n 1)
         echo "PACKAGE_JSON_PATH=$PACKAGE_JSON_PATH" >> $GITHUB_ENV
 
     - name: Debug - Print package.json path
-      run: echo "package.json found at $PACKAGE_JSON_PATH"
+      run: echo "package.json found at ${{ env.PACKAGE_JSON_PATH }}"
 
     - name: Install dependencies
       run: |
-        cd $(dirname $PACKAGE_JSON_PATH)
-        npm install
+        cd $(dirname ${{ env.PACKAGE_JSON_PATH }})
+        npm install --legacy-peer-deps
 
     - name: Build the React app
       run: |
-        cd $(dirname $PACKAGE_JSON_PATH)
+        cd $(dirname ${{ env.PACKAGE_JSON_PATH }})
         npm run build
 
     - name: Add .nojekyll file
       run: |
-        cd $(dirname $PACKAGE_JSON_PATH)
+        cd $(dirname ${{ env.PACKAGE_JSON_PATH }})
         touch build/.nojekyll
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
         branch: gh-pages
-        folder: my-new-app/build
+        folder: $(dirname ${{ env.PACKAGE_JSON_PATH }})/build
+        clean: true
+        token: ${{ secrets.GITHUB_TOKEN }}
