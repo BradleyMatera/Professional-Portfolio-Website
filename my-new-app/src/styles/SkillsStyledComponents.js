@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import { Container, Button as MuiButton, Grid } from '@mui/material';
 
-// Container for the Skills Page
+// Container for the Skills Page with background image
 export const SkillsContainer = styled(Container)`
   padding: 60px 20px;
   text-align: center;
-  background: #0a192f;
   color: #ffffff;
+  background: url('/assets/imgs/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+
 `;
 
 // List item for each skill
@@ -29,7 +31,7 @@ export const SkillItem = styled.div`
 // Container for the showcase section
 export const ShowcaseContainer = styled.div`
   background-color: #1c1c1c;
-  color: #ffffff;
+  color: #d4d4d4;
   padding: 20px;
   border-radius: 8px;
   text-align: center;

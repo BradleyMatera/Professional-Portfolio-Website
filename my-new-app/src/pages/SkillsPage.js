@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Typography, Grid, Modal } from '@mui/material';
 import { motion } from 'framer-motion';
+import anime from 'animejs/lib/anime.es.js';
 import { Chart, BarController, BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import anime from 'animejs/lib/anime.es.js';
+import styled from '@emotion/styled';
+import BackgroundImage from '../assets/imgs/bg.jpg';
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt, FaNpm, FaSass, FaAccessibleIcon, FaLaptopCode } from 'react-icons/fa';
 import {
   SkillsContainer,
@@ -23,6 +25,19 @@ import {
 // Register Chart.js components
 Chart.register(BarController, BarElement, CategoryScale, LinearScale, Title, Tooltip, Legend);
 
+const SkillsPageContainer = styled(SkillsContainer)`
+  background-image: url(${BackgroundImage});
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`;
+
 const skillsData = [
   { icon: FaHtml5, title: 'HTML5', description: 'Markup language for creating web pages.' },
   { icon: FaCss3Alt, title: 'CSS3', description: 'Stylesheet language used for describing the presentation of a document.' },
@@ -38,21 +53,14 @@ const skillsData = [
 ];
 
 const SkillsPage = () => {
-  const [frontendSkills, setFrontendSkills] = useState(0);
-  const [backendSkills, setBackendSkills] = useState(0);
-  const [projects, setProjects] = useState(0);
-  const [totalCodeLines, setTotalCodeLines] = useState(0);
+  const [frontendSkills, setFrontendSkills] = useState(3);
+  const [backendSkills, setBackendSkills] = useState(1);
+  const [projects, setProjects] = useState(3);
+  const [totalCodeLines, setTotalCodeLines] = useState(1000);
   const [openModal, setOpenModal] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState({});
 
   useEffect(() => {
-    setTimeout(() => {
-      setFrontendSkills(3);
-      setBackendSkills(1);
-      setProjects(3);
-      setTotalCodeLines(1000);
-    }, 1000);
-
     anime({
       targets: '.animate-text',
       translateY: [50, 0],
@@ -85,16 +93,8 @@ const SkillsPage = () => {
     ],
   };
 
-  const options = {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  };
-
   return (
-    <SkillsContainer maxWidth="md">
+    <SkillsPageContainer maxWidth="md">
       <BlurBackground>
         <Section>
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -102,10 +102,7 @@ const SkillsPage = () => {
               Skills
             </Typography>
             <Typography variant="body1" paragraph className="animate-text">
-              Passionate web developer with expertise in front-end technologies and modern JavaScript frameworks. Proficient in creating responsive and interactive web applications with a focus on clean, efficient code and optimal user experience.
-            </Typography>
-            <Typography variant="body1" paragraph className="animate-text">
-              My key skills include:
+              Passionate web developer with expertise in front-end technologies and modern JavaScript frameworks.
             </Typography>
           </motion.div>
           <IconGrid container spacing={4}>
@@ -128,15 +125,11 @@ const SkillsPage = () => {
             <Skill>Backend Skills: <HighlightText>{backendSkills}</HighlightText></Skill>
             <Skill>Completed Projects: <HighlightText>{projects}</HighlightText></Skill>
             <Skill>Total Lines of Code: <HighlightText>{totalCodeLines}</HighlightText></Skill>
-            <Button onClick={() => setFrontendSkills(frontendSkills + 1)}>Learn Frontend Skill</Button>
-            <Button onClick={() => setBackendSkills(backendSkills + 1)}>Learn Backend Skill</Button>
-            <Button onClick={() => setProjects(projects + 1)}>Complete Project</Button>
-            <Button onClick={() => setTotalCodeLines(totalCodeLines + 100)}>Write 100 Lines of Code</Button>
           </ShowcaseContainer>
         </Section>
         <Section>
           <ChartContainer>
-            <Bar data={data} options={options} />
+            <Bar data={data} options={{ scales: { y: { beginAtZero: true } } }} />
           </ChartContainer>
         </Section>
         <Modal open={openModal} onClose={handleCloseModal}>
@@ -153,7 +146,7 @@ const SkillsPage = () => {
           </ModalContent>
         </Modal>
       </BlurBackground>
-    </SkillsContainer>
+    </SkillsPageContainer>
   );
 };
 

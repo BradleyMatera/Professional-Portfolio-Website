@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Typography, Box, Grid, Modal, Backdrop, Fade } from '@mui/material';
 import styled from '@emotion/styled';
-import BackgroundImage from '../assets/imgs/backroundimage.png';
+import BackgroundImage from '../assets/imgs/bg.jpg';
 import ProfilePic from '../assets/imgs/profiles.png';
 import '@fontsource/roboto';
 import anime from 'animejs/lib/anime.es.js';
