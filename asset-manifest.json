@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/css/main.f06776f5.css",
-    "main.js": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/js/main.a36cdafe.js",
-    "static/media/profiles.png": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/profiles.5abef268672a1819184e.png",
-    "static/media/backroundimage.png": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/backroundimage.5da5ee6eb36ff97b37b5.png",
-    "static/media/roboto-latin-400-normal.woff2": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-latin-400-normal.297d48e1b5a10c0831a9.woff2",
-    "static/media/roboto-latin-400-normal.woff": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-latin-400-normal.047a7839f69b209db815.woff",
-    "static/media/roboto-cyrillic-ext-400-normal.woff2": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-cyrillic-ext-400-normal.5cec61a21cc20180fbe1.woff2",
-    "static/media/roboto-cyrillic-ext-400-normal.woff": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-cyrillic-ext-400-normal.135d076fa32aa0b4d105.woff",
-    "static/media/roboto-latin-ext-400-normal.woff2": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-latin-ext-400-normal.2eeae187764baf05867d.woff2",
-    "static/media/roboto-latin-ext-400-normal.woff": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-latin-ext-400-normal.27da5b36b6d3a16f53f4.woff",
-    "static/media/roboto-cyrillic-400-normal.woff2": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-cyrillic-400-normal.a9e19870cf6c4b973427.woff2",
-    "static/media/roboto-cyrillic-400-normal.woff": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-cyrillic-400-normal.5d2930082227d172f62c.woff",
-    "static/media/roboto-greek-400-normal.woff2": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-greek-400-normal.2c32b1315be61477013a.woff2",
-    "static/media/roboto-greek-400-normal.woff": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-greek-400-normal.160a791a8e4f46bca3cc.woff",
-    "static/media/roboto-vietnamese-400-normal.woff2": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-vietnamese-400-normal.d3f8e26d6c27de8102b6.woff2",
-    "static/media/roboto-vietnamese-400-normal.woff": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-vietnamese-400-normal.0dc97c66f9b542d6fa17.woff",
-    "static/media/roboto-greek-ext-400-normal.woff2": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-greek-ext-400-normal.1df4abad55796d11a0c8.woff2",
-    "static/media/roboto-greek-ext-400-normal.woff": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/media/roboto-greek-ext-400-normal.16eb83b4a3b1ea994243.woff",
-    "index.html": "https://bradleymatera.github.io/Professional-Portfolio-Website/index.html",
-    "main.f06776f5.css.map": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/css/main.f06776f5.css.map",
-    "main.a36cdafe.js.map": "https://bradleymatera.github.io/Professional-Portfolio-Website/static/js/main.a36cdafe.js.map"
+    "main.css": "https://bradleymatera.github.io/static/css/main.274ef8fd.css",
+    "main.js": "https://bradleymatera.github.io/static/js/main.1b67a13a.js",
+    "static/media/profiles.png": "https://bradleymatera.github.io/static/media/profiles.5abef268672a1819184e.png",
+    "static/media/backroundimage.png": "https://bradleymatera.github.io/static/media/backroundimage.5da5ee6eb36ff97b37b5.png",
+    "static/media/roboto-latin-400-normal.woff2": "https://bradleymatera.github.io/static/media/roboto-latin-400-normal.297d48e1b5a10c0831a9.woff2",
+    "static/media/roboto-latin-400-normal.woff": "https://bradleymatera.github.io/static/media/roboto-latin-400-normal.047a7839f69b209db815.woff",
+    "static/media/roboto-cyrillic-ext-400-normal.woff2": "https://bradleymatera.github.io/static/media/roboto-cyrillic-ext-400-normal.5cec61a21cc20180fbe1.woff2",
+    "static/media/roboto-cyrillic-ext-400-normal.woff": "https://bradleymatera.github.io/static/media/roboto-cyrillic-ext-400-normal.135d076fa32aa0b4d105.woff",
+    "static/media/roboto-latin-ext-400-normal.woff2": "https://bradleymatera.github.io/static/media/roboto-latin-ext-400-normal.2eeae187764baf05867d.woff2",
+    "static/media/roboto-latin-ext-400-normal.woff": "https://bradleymatera.github.io/static/media/roboto-latin-ext-400-normal.27da5b36b6d3a16f53f4.woff",
+    "static/media/roboto-cyrillic-400-normal.woff2": "https://bradleymatera.github.io/static/media/roboto-cyrillic-400-normal.a9e19870cf6c4b973427.woff2",
+    "static/media/roboto-cyrillic-400-normal.woff": "https://bradleymatera.github.io/static/media/roboto-cyrillic-400-normal.5d2930082227d172f62c.woff",
+    "static/media/roboto-greek-400-normal.woff2": "https://bradleymatera.github.io/static/media/roboto-greek-400-normal.2c32b1315be61477013a.woff2",
+    "static/media/roboto-greek-400-normal.woff": "https://bradleymatera.github.io/static/media/roboto-greek-400-normal.160a791a8e4f46bca3cc.woff",
+    "static/media/roboto-vietnamese-400-normal.woff2": "https://bradleymatera.github.io/static/media/roboto-vietnamese-400-normal.d3f8e26d6c27de8102b6.woff2",
+    "static/media/roboto-vietnamese-400-normal.woff": "https://bradleymatera.github.io/static/media/roboto-vietnamese-400-normal.0dc97c66f9b542d6fa17.woff",
+    "static/media/roboto-greek-ext-400-normal.woff2": "https://bradleymatera.github.io/static/media/roboto-greek-ext-400-normal.1df4abad55796d11a0c8.woff2",
+    "static/media/roboto-greek-ext-400-normal.woff": "https://bradleymatera.github.io/static/media/roboto-greek-ext-400-normal.16eb83b4a3b1ea994243.woff",
+    "index.html": "https://bradleymatera.github.io/index.html",
+    "main.274ef8fd.css.map": "https://bradleymatera.github.io/static/css/main.274ef8fd.css.map",
+    "main.1b67a13a.js.map": "https://bradleymatera.github.io/static/js/main.1b67a13a.js.map"
   },
   "entrypoints": [
-    "static/css/main.f06776f5.css",
-    "static/js/main.a36cdafe.js"
+    "static/css/main.274ef8fd.css",
+    "static/js/main.1b67a13a.js"
   ]
 }
