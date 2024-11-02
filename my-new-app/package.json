@@ -21,6 +21,7 @@
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
+    "@fontsource/roboto": "^5.1.0",
     "@mui/material": "^5.16.4",
     "animejs": "^3.2.2",
     "axios": "^1.7.2",
