@@ -1,10 +1,7 @@
-// AboutPage.js
-
 import React, { useEffect } from 'react';
 import { Typography, Grid, IconButton } from '@mui/material';
-import { motion } from 'framer-motion';
+import { FaGraduationCap, FaLaptopCode, FaBriefcase, FaMedkit, FaReact, FaHtml5, FaCss3Alt, FaJsSquare, FaNodeJs } from 'react-icons/fa';
 import anime from 'animejs/lib/anime.es.js';
-import { FaGraduationCap, FaLaptopCode, FaBriefcase, FaMedkit, FaReact, FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
 import { AboutContainer, Section, HighlightText, BlurBackground, IconWrapper, ExperienceItem } from '../styles/AboutStyledComponents';
 
 const AboutPage = () => {
@@ -17,85 +14,39 @@ const AboutPage = () => {
       easing: 'easeOutExpo',
       delay: anime.stagger(300),
     });
-
-    anime({
-      targets: '.animate-icon',
-      scale: [0.5, 1],
-      opacity: [0, 1],
-      duration: 800,
-      easing: 'easeOutExpo',
-      delay: anime.stagger(200, { start: 500 }),
-    });
-
-    anime({
-      targets: '.animate-box',
-      translateX: [-50, 0],
-      opacity: [0, 1],
-      duration: 1000,
-      easing: 'easeOutExpo',
-      delay: anime.stagger(200, { start: 700 }),
-    });
   }, []);
 
   return (
     <AboutContainer>
       <BlurBackground>
         <Section>
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-            <Typography variant="h2" gutterBottom className="animate-text">
-              About <HighlightText>Me</HighlightText>
-            </Typography>
-          </motion.div>
+          <Typography variant="h2" gutterBottom className="animate-text">
+            About <HighlightText>Me</HighlightText>
+          </Typography>
           <Typography variant="body1" paragraph className="animate-text">
-            I'm a passionate web developer with a focus on creating responsive and interactive web applications. Currently pursuing a Bachelor's degree in Web Development at Full Sail University, I'm dedicated to honing my skills in front-end technologies and modern JavaScript frameworks.
+            I'm a highly motivated web developer with a solid foundation in front-end and back-end technologies, currently pursuing a Bachelor's degree in Web Development at Full Sail University. My educational journey has equipped me with a well-rounded skill set in HTML, CSS, JavaScript, React, Node.js, and UX design.
+          </Typography>
+          <Typography variant="body1" paragraph className="animate-text">
+            Through Full Sail's rigorous coursework, I've mastered the principles of web architecture, application development, and database management. Notable courses include:
           </Typography>
         </Section>
+        
         <Section className="animate-box">
           <Typography variant="h4" gutterBottom className="animate-text">
-            Experience
+            Relevant Coursework
           </Typography>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
-              <ExperienceItem className="animate-text">
-                <IconWrapper className="animate-icon">
-                  <FaGraduationCap size="1.5em" color="#64ffda" />
-                </IconWrapper>
-                <Typography variant="h6">Student at Full Sail University</Typography>
-                <Typography variant="body2">Focusing on front-end development using HTML5, CSS, JavaScript, and UX Design.</Typography>
-              </ExperienceItem>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <ExperienceItem className="animate-text">
-                <IconWrapper className="animate-icon">
-                  <FaLaptopCode size="1.5em" color="#64ffda" />
-                </IconWrapper>
-                <Typography variant="h6">Self-employed Web Developer</Typography>
-                <Typography variant="body2">Showcasing projects on YouTube and providing IT consulting.</Typography>
-              </ExperienceItem>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <ExperienceItem className="animate-text">
-                <IconWrapper className="animate-icon">
-                  <FaBriefcase size="1.5em" color="#64ffda" />
-                </IconWrapper>
-                <Typography variant="h6">Case Manager at Mason County</Typography>
-                <Typography variant="body2">Assisted clients with court-mandated activities, developing strong communication and organizational skills.</Typography>
-              </ExperienceItem>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <ExperienceItem className="animate-text">
-                <IconWrapper className="animate-icon">
-                  <FaMedkit size="1.5em" color="#64ffda" />
-                </IconWrapper>
-                <Typography variant="h6">Healthcare Specialist in the US Army</Typography>
-                <Typography variant="body2">Provided critical healthcare services, demonstrating attention to detail and ability to work under pressure.</Typography>
-              </ExperienceItem>
-            </Grid>
-          </Grid>
+          <ul>
+            <li><Typography variant="body1" paragraph className="animate-text"><strong>WDV1100 - Introduction to Web Architecture</strong>: An in-depth exploration of web structures, focusing on designing scalable, efficient applications.</Typography></li>
+            <li><Typography variant="body1" paragraph className="animate-text"><strong>DEV2319 - Interfaces and Usability</strong>: Taught me how to create user-friendly interfaces prioritizing user experience.</Typography></li>
+            <li><Typography variant="body1" paragraph className="animate-text"><strong>DEV2301 - Application Development</strong>: Advanced my skills in full-stack development and project planning.</Typography></li>
+            <li><Typography variant="body1" paragraph className="animate-text"><strong>CTI3622 - Database Systems</strong>: A comprehensive course on database design, enabling efficient data handling using SQL and NoSQL.</Typography></li>
+            <li><Typography variant="body1" paragraph className="animate-text"><strong>WDV353 - Server-Side Languages</strong>: Focused on developing back-end functionality, including API creation and data security practices.</Typography></li>
+          </ul>
         </Section>
+
         <Section className="animate-box">
           <Typography variant="h4" gutterBottom className="animate-text">
-            Skills
+            Technical Skills
           </Typography>
           <Grid container spacing={2} justifyContent="center">
             <Grid item className="animate-icon">
@@ -117,6 +68,58 @@ const AboutPage = () => {
               <IconButton>
                 <FaJsSquare size="2em" color="#f7df1e" />
               </IconButton>
+            </Grid>
+            <Grid item className="animate-icon">
+              <IconButton>
+                <FaNodeJs size="2em" color="#3C873A" />
+              </IconButton>
+            </Grid>
+          </Grid>
+          <Typography variant="body1" paragraph className="animate-text">
+            I specialize in responsive, accessible web applications, integrating Tailwind CSS for styling, and have experience with tools like Jest for testing and Postman for API validation.
+          </Typography>
+        </Section>
+
+        <Section className="animate-box">
+          <Typography variant="h4" gutterBottom className="animate-text">
+            Experience
+          </Typography>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <ExperienceItem className="animate-text">
+                <IconWrapper className="animate-icon">
+                  <FaGraduationCap size="1.5em" color="#64ffda" />
+                </IconWrapper>
+                <Typography variant="h6">Student at Full Sail University</Typography>
+                <Typography variant="body2">Pursuing a Bachelor's in Web Development, focused on HTML, CSS, JavaScript, UX, and accessibility standards.</Typography>
+              </ExperienceItem>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <ExperienceItem className="animate-text">
+                <IconWrapper className="animate-icon">
+                  <FaLaptopCode size="1.5em" color="#64ffda" />
+                </IconWrapper>
+                <Typography variant="h6">Independent Web Developer</Typography>
+                <Typography variant="body2">Built various projects showcased on GitHub, including interactive applications, with a focus on user experience and modern design.</Typography>
+              </ExperienceItem>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <ExperienceItem className="animate-text">
+                <IconWrapper className="animate-icon">
+                  <FaBriefcase size="1.5em" color="#64ffda" />
+                </IconWrapper>
+                <Typography variant="h6">Case Manager at Mason County</Typography>
+                <Typography variant="body2">Enhanced organizational skills, working closely with clients and managing sensitive data.</Typography>
+              </ExperienceItem>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <ExperienceItem className="animate-text">
+                <IconWrapper className="animate-icon">
+                  <FaMedkit size="1.5em" color="#64ffda" />
+                </IconWrapper>
+                <Typography variant="h6">Healthcare Specialist, US Army</Typography>
+                <Typography variant="body2">Developed critical problem-solving skills and the ability to work under pressure during my service.</Typography>
+              </ExperienceItem>
             </Grid>
           </Grid>
         </Section>
