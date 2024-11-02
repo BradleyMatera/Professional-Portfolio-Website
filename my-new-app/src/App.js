@@ -10,8 +10,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <HeaderNavBar />
+<BrowserRouter basename="/Professional-Portfolio-Website">      <HeaderNavBar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
