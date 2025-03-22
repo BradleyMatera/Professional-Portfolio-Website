@@ -41,7 +41,7 @@ const Projects = () => {
     { title: "Arrays and Classes Exercise", link: "https://codepen.io/student-account-bradley-matera/pen/GRaZGPE" },
     { title: "Data Visualization", link: "https://codepen.io/student-account-bradley-matera/pen/dyEYbPO" },
     { title: "Loop Exercise", link: "https://codepen.io/student-account-bradley-matera/pen/VwOLJEN" },
-  ];
+    { title: "Resume" , link: "https://codepen.io/student-account-bradley-matera/full/vEYrOGB"},];
 
   return (
     <ProjectsContainer maxWidth="lg" id="projects">
