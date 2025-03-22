@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Typography, Button, Grid, Snackbar, Alert } from '@mui/material';
 import { motion } from 'framer-motion';
 import { ContactContainer, ContactForm, StyledTextField, SocialLinkButton } from '../styles/ContactStyledComponents';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaYoutube, FaCodepen } from 'react-icons/fa';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -68,13 +68,13 @@ const ContactPage = () => {
           Contact Me
         </Typography>
         <Typography variant="body1" paragraph>
-          I'm always interested in new opportunities, collaborations, or just chatting about web development. Feel free to reach out!
+          I’m open to opportunities, collaborations, or discussions about web development. Reach out below!
         </Typography>
         <Typography variant="body1" paragraph>
           Email me directly at: <a href="mailto:bradmatera@gmail.com" style={{ color: '#64ffda', textDecoration: 'underline' }}>bradmatera@gmail.com</a>
         </Typography>
         <Typography variant="body1" paragraph>
-          Or use the form below:
+          Or use this form:
         </Typography>
         
         <ContactForm
@@ -132,23 +132,23 @@ const ContactPage = () => {
         
         <Grid container spacing={2} justifyContent="center" style={{ marginTop: '40px' }}>
           <Grid item>
-            <SocialLinkButton
-              href="https://github.com/BradleyMatera"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.2 }}
-            >
+            <SocialLinkButton href="https://github.com/BradleyMatera" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }}>
               <FaGithub size="2em" />
             </SocialLinkButton>
           </Grid>
           <Grid item>
-            <SocialLinkButton
-              href="https://www.linkedin.com/in/championingempatheticwebsolutionsthroughcode/"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.2 }}
-            >
+            <SocialLinkButton href="https://www.linkedin.com/in/championingempatheticwebsolutionsthroughcode/" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }}>
               <FaLinkedin size="2em" />
+            </SocialLinkButton>
+          </Grid>
+          <Grid item>
+            <SocialLinkButton href="https://www.youtube.com/@bradmatera" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }}>
+              <FaYoutube size="2em" />
+            </SocialLinkButton>
+          </Grid>
+          <Grid item>
+            <SocialLinkButton href="https://codepen.io/student-account-bradley-matera" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.2 }}>
+              <FaCodepen size="2em" />
             </SocialLinkButton>
           </Grid>
         </Grid>

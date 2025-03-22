@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { FaBars, FaTimes, FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaCode, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
 import { Drawer, IconButton, List, ListItem, ListItemText, AppBar, Toolbar, Tooltip } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -65,15 +65,12 @@ const Logo = styled(motion.div)`
 const HeaderNavBar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const toggleDrawer = () => {
-    setDrawerOpen(!drawerOpen);
-  };
+  const toggleDrawer = () => setDrawerOpen(!drawerOpen);
 
   const navItems = [
-    { name: 'Home', path: '/', icon: <FaHome /> },
-    { name: 'About', path: '/about', icon: <FaUser /> },
-    { name: 'Skills', path: '/skills', icon: <FaCode /> },
+    { name: 'Home/About', path: '/', icon: <FaHome /> },
     { name: 'Projects', path: '/projects', icon: <FaProjectDiagram /> },
+    { name: 'Skills/Experience', path: '/skills-experience', icon: <FaCode /> },
     { name: 'Contact', path: '/contact', icon: <FaEnvelope /> },
   ];
 

@@ -17,7 +17,7 @@ const Footer = () => (
     <Content>
       <Section>
         <SectionTitle>About Me</SectionTitle>
-        <SectionText>I'm a passionate web developer focused on creating responsive and interactive web applications. Always eager to learn and take on new challenges in the ever-evolving world of web development.</SectionText>
+        <SectionText>Army veteran and web developer passionate about creating responsive, accessible web applications. Currently a student at Full Sail University, preparing for an AWS internship in Summer 2025.</SectionText>
       </Section>
       <Section>
         <SectionTitle>Connect</SectionTitle>
@@ -39,7 +39,7 @@ const Footer = () => (
       </Section>
     </Content>
     <BottomBar>
-      <Copyright>&copy; {new Date().getFullYear()} Bradley Matera. All rights reserved.</Copyright>
+      <Copyright>© 2025 Bradley Matera. All rights reserved.</Copyright>
     </BottomBar>
   </FooterContainer>
 );
