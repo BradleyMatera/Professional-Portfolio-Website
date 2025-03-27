@@ -55,10 +55,11 @@ const ProjectsPage = () => {
       githubLink: "https://github.com/BradleyMatera/RESTfulRoutesUsingExpressJS",
     },
     {
-      title: "Pongd_Deluxe",
+      title: "Pong_Deluxe",
       description: "Pong game using PixiJS for real-time graphics.",
       image: "https://via.placeholder.com/400x225?text=PixiJS+Pong",
-      githubLink: "https://pongdeluxe.netlify.app/",
+      githubLink: "https://github.com/BradleyMatera/Pong-Deluxe",
+      liveLink: "https://pongdeluxe.netlify.app/",
     },
     {
       title: "CheeseMath Jest Tests",
