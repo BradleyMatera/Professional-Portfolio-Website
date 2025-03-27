@@ -68,15 +68,15 @@ const ProjectsPage = () => {
       githubLink: "https://github.com/BradleyMatera/CheeseMath-Jest-Tests/tree/main/CheeseMath",
       liveLink: "https://cheese-math.vercel.app/",
     },
+    {
       title: "Animal Sounds",
       description: "Animal Sounds",
       image: "https://via.placeholder.com/400x225?text=AnimalSounds",
       githubLink: "https://github.com/BradleyMatera/AnimalSounds",
       liveLink: "https://bradleymatera.github.io/AnimalSounds/",
-    {
-
-      
     },
+
+      },
 
   ];
 
