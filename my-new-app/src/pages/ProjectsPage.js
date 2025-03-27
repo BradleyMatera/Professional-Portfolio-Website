@@ -40,7 +40,7 @@ const ProjectsPage = () => {
       description: "Mobile CRUD app with React Native, Node.js, MongoDB, deployed on Heroku.",
       image: "https://via.placeholder.com/400x225?text=Anime+CRUD",
       githubLink: "https://github.com/BradleyMatera", // Assuming no specific repo; update if available
-      liveLink: "https://bradleysgatsbyblog.netlify.app/projects/react-native-anime-crud-app/",
+      liveLink: "https://cruddemo-one.vercel.app/",
     },
     {
       title: "Docker Multilang Project",
@@ -55,10 +55,10 @@ const ProjectsPage = () => {
       githubLink: "https://github.com/BradleyMatera/RESTfulRoutesUsingExpressJS",
     },
     {
-      title: "PixiJS Pong",
+      title: "Pongd_Deluxe",
       description: "Pong game using PixiJS for real-time graphics.",
       image: "https://via.placeholder.com/400x225?text=PixiJS+Pong",
-      githubLink: "https://github.com/BradleyMatera/Pixiejs/tree/main/pixi-pong",
+      githubLink: "https://pongdeluxe.netlify.app/",
     },
     {
       title: "CheeseMath Jest Tests",
