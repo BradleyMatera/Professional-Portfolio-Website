@@ -65,6 +65,7 @@ const ProjectsPage = () => {
       description: "Math utilities with Jest unit tests.",
       image: "https://via.placeholder.com/400x225?text=CheeseMath",
       githubLink: "https://github.com/BradleyMatera/CheeseMath-Jest-Tests/tree/main/CheeseMath",
+      liveLink: "https://cheese-math.vercel.app/",
     },
 
   ];
