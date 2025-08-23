@@ -92,7 +92,7 @@ Opens at [http://localhost:5000](http://localhost:5000).
 
 ## 📬 Contact
 For questions or collaboration:  
-- **Email**: matera.bradley@gmail.com  
+- **Email**: bradmatera@gmail.com  
 - **GitHub**: [BradleyMatera](https://github.com/BradleyMatera)  
 - **LinkedIn**: [Brad Matera](https://www.linkedin.com/in/championingempatheticwebsolutionsthroughcode/)  
 
