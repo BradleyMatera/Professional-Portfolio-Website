@@ -11,8 +11,7 @@ const projects = [
   {
     title: "WebGPU Shapes Renderer",
     description: "Demo of a WebGPU-based renderer displaying selectable 2D shapes (triangle, square, pentagon, diamond, hexagon) on a canvas, forked and enhanced from an original project. (only works on Chrome)",
-    image: "/imgs/placeholder.svg",
-    githubLink: "https://github.com/BradleyMatera/leaf-js",
+        githubLink: "https://github.com/BradleyMatera/leaf-js",
     liveLink: "https://bradleymatera.github.io/leaf-js/",
     tags: ["WebGPU", "JavaScript", "Graphics"],
   },
@@ -35,8 +34,7 @@ const projects = [
   {
     title: "Mom's Business Website",
     description: "A responsive website for my mom's fitness business using HTML, CSS, and JavaScript, with a photo gallery and contact form.",
-    image: "/imgs/RoxysFittness.png",
-    githubLink: "https://github.com/BradleyMatera/Moms-website",
+        githubLink: "https://github.com/BradleyMatera/Moms-website",
     liveLink: "https://bradleymatera.github.io/Moms-website/",
     tags: ["HTML", "CSS", "JavaScript"],
   },
@@ -130,15 +128,7 @@ export default function ProjectsPage() {
                 viewport={{ once: true }}
               >
                 <Card className="bg-[#1c1c1c] border border-[#fb8b24]/20 hover:border-[#fb8b24] transition-all duration-300 h-full">
-                  <CardHeader className="p-0 overflow-hidden">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={400}
-                      height={225}
-                      className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </CardHeader>
+<CardHeader className="p-0 overflow-hidden" />
                   <CardBody className="flex-grow">
                     <h3 className="text-xl font-bold text-white mb-2">
                       {project.title}
