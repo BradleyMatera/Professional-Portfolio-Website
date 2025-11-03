@@ -7,6 +7,10 @@ import { FaHome, FaExclamationTriangle } from "react-icons/fa";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
+/**
+ * Refactored for UI/UX, NextUI, Tailwind, accessibility, and polish.
+ * Features: animated icon, bold typography, responsive, accessible, clear CTAs.
+ */
 export default function NotFound() {
   return (
     <>

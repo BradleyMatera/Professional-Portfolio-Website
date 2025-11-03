@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Refactored for UI/UX, NextUI, Tailwind, accessibility, and polish.
+ * Features: custom fonts, metadata, responsive layout, Providers for theme support.
+ */
 export default function RootLayout({
   children,
 }: Readonly<{

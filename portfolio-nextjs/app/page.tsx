@@ -8,6 +8,10 @@ import { FaArrowDown } from "react-icons/fa";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
+/**
+ * Refactored for UI/UX, NextUI, Tailwind, accessibility, and polish.
+ * Features: hero section, rich typography, gradients, motion, responsive, accessible.
+ */
 export default function Home() {
   return (
     <>
