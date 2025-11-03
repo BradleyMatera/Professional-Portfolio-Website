@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { Card, CardBody } from "@nextui-org/react";
+import { Card, CardBody, Button } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { FaArrowDown } from "react-icons/fa";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -12,17 +14,17 @@ export default function Home() {
       <Navigation />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section
-          className="relative min-h-screen flex items-center justify-center px-4 py-20"
-          style={{
-            backgroundImage: "url('/imgs/bg.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-          }}
-        >
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-[#0a192f]/80 backdrop-blur-sm"></div>
+        <section className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-br from-[#0a192f] via-[#0a192f] to-[#1c1c1c]">
+          {/* Background Image with Next.js Image component for basePath support */}
+          <div className="absolute inset-0 z-0 opacity-20">
+            <Image
+              src="/imgs/bg.jpg"
+              alt="Background"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
 
           {/* Content */}
           <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -69,7 +71,7 @@ export default function Home() {
                   </motion.h2>
 
                   <motion.p
-                    className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto"
+                    className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.9 }}
@@ -80,10 +82,45 @@ export default function Home() {
                     3.85 GPA). I enjoy messing around with web tools and projects, and I'm getting 
                     ready for an AWS Cloud Associate internship in Summer 2025. After that, who knows?
                   </motion.p>
+
+                  <motion.div
+                    className="flex flex-wrap gap-4 justify-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 1.1 }}
+                  >
+                    <Button
+                      as={Link}
+                      href="/projects"
+                      size="lg"
+                      className="bg-[#fb8b24] hover:bg-[#e07a15] text-white font-bold shadow-lg hover:shadow-xl transition-all"
+                    >
+                      View My Work
+                    </Button>
+                    <Button
+                      as={Link}
+                      href="/contact"
+                      size="lg"
+                      variant="bordered"
+                      className="border-2 border-[#64ffda] text-[#64ffda] hover:bg-[#64ffda] hover:text-[#0a192f] font-bold transition-all"
+                    >
+                      Get In Touch
+                    </Button>
+                  </motion.div>
                 </CardBody>
               </Card>
             </motion.div>
           </div>
+
+          {/* Scroll indicator */}
+          <motion.div
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.5, repeat: Infinity, duration: 1.5 }}
+          >
+            <FaArrowDown className="text-[#fb8b24] text-2xl animate-bounce" />
+          </motion.div>
         </section>
 
         {/* Featured Skills Section */}
