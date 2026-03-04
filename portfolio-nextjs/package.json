@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "build:pages": "next build && touch docs/.nojekyll",
-    "start": "next start",
-    "lint": "eslint"
+    "dev": "npx next dev",
+    "build": "npx next build",
+    "build:pages": "npx next build && node -e \"require('fs').mkdirSync('docs',{recursive:true}); require('fs').closeSync(require('fs').openSync('docs/.nojekyll','w'))\"",
+    "start": "npx next start",
+    "lint": "npx eslint ."
   },
   "dependencies": {
     "@nextui-org/react": "^2.6.11",
