@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npx next dev",
-    "build": "npx next build",
-    "build:pages": "npx next build && node -e \"require('fs').mkdirSync('docs',{recursive:true}); require('fs').closeSync(require('fs').openSync('docs/.nojekyll','w'))\"",
-    "start": "npx next start",
-    "lint": "npx eslint ."
+    "dev": "node ./node_modules/next/dist/bin/next dev --webpack",
+    "build": "node ./node_modules/next/dist/bin/next build",
+    "build:pages": "node ./node_modules/next/dist/bin/next build && node -e \"require('fs').mkdirSync('docs',{recursive:true}); require('fs').closeSync(require('fs').openSync('docs/.nojekyll','w'))\"",
+    "start": "node ./node_modules/next/dist/bin/next start",
+    "lint": "node ./node_modules/eslint/bin/eslint.js ."
   },
   "dependencies": {
     "@nextui-org/react": "^2.6.11",
@@ -19,14 +19,14 @@
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "babel-plugin-react-compiler": "1.0.0",
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
-    "eslint-config-next": "16.0.1"
+    "eslint-config-next": "16.0.1",
+    "tailwindcss": "^4",
+    "typescript": "5.9.3"
   }
 }
