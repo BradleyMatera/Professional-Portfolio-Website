@@ -7,7 +7,8 @@
     "build": "node ./node_modules/next/dist/bin/next build",
     "build:pages": "node ./node_modules/next/dist/bin/next build && node -e \"require('fs').mkdirSync('docs',{recursive:true}); require('fs').closeSync(require('fs').openSync('docs/.nojekyll','w'))\"",
     "start": "node ./node_modules/next/dist/bin/next start",
-    "lint": "node ./node_modules/eslint/bin/eslint.js ."
+    "lint": "node ./node_modules/eslint/bin/eslint.js .",
+    "clean": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"$procs = Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'node.exe' -and $_.CommandLine -like '*portfolio-nextjs*next*dev*' }; foreach ($p in $procs) { Stop-Process -Id $p.ProcessId -Force -ErrorAction SilentlyContinue }; Start-Sleep -Milliseconds 300; if (Test-Path 'docs/dev') { Remove-Item -Recurse -Force 'docs/dev' -ErrorAction SilentlyContinue }; if (Test-Path 'docs/cache') { Remove-Item -Recurse -Force 'docs/cache' -ErrorAction SilentlyContinue }; if (Test-Path '.next') { Remove-Item -Recurse -Force '.next' -ErrorAction SilentlyContinue }\""
   },
   "dependencies": {
     "@nextui-org/react": "^2.6.11",

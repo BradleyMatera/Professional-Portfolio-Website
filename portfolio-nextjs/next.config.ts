@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   output: "export",
-  distDir: "docs",
+  distDir: isProd ? "docs" : ".next",
   basePath: isProd ? "/Professional-Portfolio-Website" : "",
   images: {
     unoptimized: true, // Required for static export
