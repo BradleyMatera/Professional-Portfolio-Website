@@ -22,7 +22,7 @@ export default function Home() {
           {/* Background Image with Next.js Image component for basePath support */}
           <div className="absolute inset-0 z-0 opacity-20">
             <Image
-              src="imgs/bg.jpg"
+              src="/imgs/portfolio-hero-background.png"
               alt="Background"
               fill
               className="object-cover"
@@ -39,7 +39,7 @@ export default function Home() {
               className="mb-8"
             >
               <Image
-                src="imgs/profiles.png"
+                src="/imgs/profile-hero-headshot.png"
                 alt="Bradley Matera Profile"
                 width={200}
                 height={200}

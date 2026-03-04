@@ -10,38 +10,43 @@ import Footer from "@/components/Footer";
 const projects = [
   {
     title: "WebGPU Shapes Renderer",
-    description: "Demo of a WebGPU-based renderer displaying selectable 2D shapes (triangle, square, pentagon, diamond, hexagon) on a canvas, forked and enhanced from an original project. (only works on Chrome)",
-        githubLink: "https://github.com/BradleyMatera/leaf-js",
+    description:
+      "Demo of a WebGPU-based renderer displaying selectable 2D shapes (triangle, square, pentagon, diamond, hexagon) on a canvas, forked and enhanced from an original project. (only works on Chrome)",
+    image: "/imgs/project-gallery-preview.png",
+    githubLink: "https://github.com/BradleyMatera/leaf-js",
     liveLink: "https://bradleymatera.github.io/leaf-js/",
     tags: ["WebGPU", "JavaScript", "Graphics"],
   },
   {
     title: "Gatsby Starter Minimal Blog",
     description: "React-based blog fetching data from an Express API, deployed on Netlify.",
-    image: "/imgs/placeholder.svg",
+    image: "/imgs/project-placeholder.png",
     githubLink: "https://github.com/BradleyMatera/gatsby-starter-minimal-blog",
     liveLink: "https://bradleysgatsbyblog.netlify.app/",
     tags: ["Gatsby", "React", "Express"],
   },
   {
     title: "Interactive Pokedex",
-    description: "An engaging Pokedex application built with HTML, Tailwind CSS, and JavaScript, integrating Pokémon APIs.",
-    image: "/imgs/placeholder.svg",
+    description:
+      "An engaging Pokedex application built with HTML, Tailwind CSS, and JavaScript, integrating Pokemon APIs.",
+    image: "/imgs/interactive-pokedex-preview.png",
     githubLink: "https://github.com/BradleyMatera/Interactive-Pokedex",
     liveLink: "https://bradleymatera.github.io/Interactive-Pokedex/",
     tags: ["HTML", "Tailwind CSS", "JavaScript"],
   },
   {
     title: "Mom's Business Website",
-    description: "A responsive website for my mom's fitness business using HTML, CSS, and JavaScript, with a photo gallery and contact form.",
-        githubLink: "https://github.com/BradleyMatera/Moms-website",
+    description:
+      "A responsive website for my mom's fitness business using HTML, CSS, and JavaScript, with a photo gallery and contact form.",
+    image: "/imgs/roxys-fitness-preview.png",
+    githubLink: "https://github.com/BradleyMatera/Moms-website",
     liveLink: "https://bradleymatera.github.io/Moms-website/",
     tags: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "React Native Anime CRUD App",
     description: "Mobile CRUD app with React Native, Node.js, MongoDB, deployed on Heroku.",
-    image: "/imgs/placeholder.svg",
+    image: "/imgs/profile-headshot.png",
     githubLink: "https://github.com/BradleyMatera",
     liveLink: "https://cruddemo-one.vercel.app/",
     tags: ["React Native", "Node.js", "MongoDB"],
@@ -49,21 +54,21 @@ const projects = [
   {
     title: "Docker Multilang Project",
     description: "Dockerized multi-language app (Python/Node.js) for server tooling.",
-    image: "/imgs/placeholder.svg",
+    image: "/imgs/single-project-preview.png",
     githubLink: "https://github.com/BradleyMatera/docker_multilang_project",
     tags: ["Docker", "Python", "Node.js"],
   },
   {
     title: "RESTful Routes Using ExpressJS",
     description: "RESTful API built with Express.js.",
-    image: "/imgs/placeholder.svg",
+    image: "/imgs/project-placeholder.png",
     githubLink: "https://github.com/BradleyMatera/RESTfulRoutesUsingExpressJS",
     tags: ["Express.js", "Node.js", "REST API"],
   },
   {
     title: "Pong Deluxe",
     description: "Pong game using PixiJS for real-time graphics.",
-    image: "/imgs/placeholder.svg",
+    image: "/imgs/project-placeholder.png",
     githubLink: "https://github.com/BradleyMatera/Pong-Deluxe",
     liveLink: "https://pongdeluxe.netlify.app/",
     tags: ["PixiJS", "JavaScript", "Game Dev"],
@@ -71,7 +76,7 @@ const projects = [
   {
     title: "CheeseMath Jest Tests",
     description: "Math utilities with Jest unit tests.",
-    image: "/imgs/placeholder.svg",
+    image: "/imgs/project-placeholder.png",
     githubLink: "https://github.com/BradleyMatera/CheeseMath-Jest-Tests/tree/main/CheeseMath",
     liveLink: "https://cheese-math.vercel.app/",
     tags: ["Jest", "Testing", "JavaScript"],
@@ -79,7 +84,7 @@ const projects = [
   {
     title: "Animal Sounds",
     description: "Interactive animal sounds application.",
-    image: "/imgs/placeholder.svg",
+    image: "/imgs/project-placeholder.png",
     githubLink: "https://github.com/BradleyMatera/AnimalSounds",
     liveLink: "https://bradleymatera.github.io/AnimalSounds/",
     tags: ["HTML", "CSS", "JavaScript"],
@@ -102,22 +107,18 @@ export default function ProjectsPage() {
       <Navigation />
       <main className="flex-grow bg-gradient-to-b from-[#0a192f] to-[#1c1c1c] py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl sm:text-5xl font-bold text-[#64ffda] mb-4">
-              Projects
-            </h1>
+            <h1 className="text-4xl sm:text-5xl font-bold text-[#64ffda] mb-4">Projects</h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               A collection of my web development projects showcasing various technologies and skills.
             </p>
           </motion.div>
 
-          {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {projects.map((project, index) => (
               <motion.div
@@ -128,14 +129,18 @@ export default function ProjectsPage() {
                 viewport={{ once: true }}
               >
                 <Card className="bg-[#1c1c1c] border border-[#fb8b24]/20 hover:border-[#fb8b24] transition-all duration-300 h-full">
-<CardHeader className="p-0 overflow-hidden" />
+                  <CardHeader className="p-0 overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={400}
+                      height={225}
+                      className="w-full h-48 object-cover"
+                    />
+                  </CardHeader>
                   <CardBody className="flex-grow">
-                    <h3 className="text-xl font-bold text-white mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-400 mb-4">
-                      {project.description}
-                    </p>
+                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                    <p className="text-gray-400 mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <Chip
@@ -182,7 +187,6 @@ export default function ProjectsPage() {
             ))}
           </div>
 
-          {/* CodePen Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -205,9 +209,7 @@ export default function ProjectsPage() {
               >
                 <Card className="bg-[#1c1c1c] border border-[#64ffda]/20 hover:border-[#64ffda] transition-all duration-300">
                   <CardBody>
-                    <h3 className="text-lg font-semibold text-white mb-4">
-                      {pen.title}
-                    </h3>
+                    <h3 className="text-lg font-semibold text-white mb-4">{pen.title}</h3>
                     <Button
                       as="a"
                       href={pen.link}
