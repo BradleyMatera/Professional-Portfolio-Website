@@ -8,6 +8,8 @@ import { FaArrowDown } from "react-icons/fa";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
+const basePath = process.env.NODE_ENV === "production" ? "/Professional-Portfolio-Website" : "";
+
 /**
  * Refactored for UI/UX, NextUI, Tailwind, accessibility, and polish.
  * Features: hero section, rich typography, gradients, motion, responsive, accessible.
@@ -22,7 +24,7 @@ export default function Home() {
           {/* Background Image with Next.js Image component for basePath support */}
           <div className="absolute inset-0 z-0 opacity-20">
             <Image
-              src="/imgs/portfolio-hero-background.png"
+              src={`${basePath}/imgs/portfolio-hero-background.png`}
               alt="Background"
               fill
               className="object-cover"
@@ -39,7 +41,7 @@ export default function Home() {
               className="mb-8"
             >
               <Image
-                src="/imgs/profile-hero-headshot.png"
+                src={`${basePath}/imgs/profile-hero-headshot.png`}
                 alt="Bradley Matera Profile"
                 width={200}
                 height={200}

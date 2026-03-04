@@ -7,6 +7,8 @@ import { FaGithub, FaExternalLinkAlt, FaCodepen } from "react-icons/fa";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
+const basePath = process.env.NODE_ENV === "production" ? "/Professional-Portfolio-Website" : "";
+
 const projects = [
   {
     title: "WebGPU Shapes Renderer",
@@ -131,7 +133,7 @@ export default function ProjectsPage() {
                 <Card className="bg-[#1c1c1c] border border-[#fb8b24]/20 hover:border-[#fb8b24] transition-all duration-300 h-full">
                   <CardHeader className="p-0 overflow-hidden">
                     <Image
-                      src={project.image}
+                      src={`${basePath}${project.image}`}
                       alt={project.title}
                       width={400}
                       height={225}
